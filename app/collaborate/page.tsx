@@ -28,17 +28,17 @@ const pathways = [
   {
     title: "Problem discovery",
     copy:
-      "We work with end-users to understand what breaks in the field, what evidence is available, and where AI could responsibly help."
+      "We work with end-users to understand where existing AI breaks in the field, and what the operational constraints are."
   },
   {
     title: "Field-informed prototypes",
     copy:
-      "We can translate operational constraints into research prototypes, evaluation scenarios, and sensing workflows."
+      "We can translate operational constraints into evaluations, V&V, and research prototypes."
   },
   {
     title: "Data and sensing interpretation",
     copy:
-      "We study radar, low-quality audio, imagery, and other difficult signals with attention to sensor physics and failure modes."
+      "We aim to model data that traditionally requires specialized expertise to understand with attention to sensor physics and failure modes."
   },
   {
     title: "Evaluation and training",
@@ -65,27 +65,21 @@ export default function CollaboratePage() {
           <p className="eyebrow">Collaborate</p>
           <h1>Bring us the hard parts.</h1>
           <p className="lede">
-            We collaborate with first responders, emergency managers, public
-            safety teams, humanitarian operators, students, researchers, and
-            technical partners who want AI systems shaped by real constraints.
+            We collaborate with first responders, public
+            safety teams, humanitarian operators, warfighters, researchers, and
+            technical partners who need breakthroughs for their environments.
           </p>
-          <div className="button-row">
-            <a className="button" href={siteConfig.collaborationHref}>
-              Start a conversation
-            </a>
-            <Link className="button secondary" href="/publications">
-              See publications
-            </Link>
-          </div>
         </div>
         <div className="collab-panel" aria-hidden="true">
-          <span
-            className="collab-pattern"
-            style={{
-              backgroundImage: `linear-gradient(90deg, transparent 0 48%, rgba(232, 93, 4, 0.28) 49% 51%, transparent 52%), url("${assetPath("/brand/line-drawing.png")}")`
-            }}
-          />
-          <img src={assetPath("/brand/logo-no-text.svg")} alt="" />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={assetPath("/brand/logo-no-text.svg")}
+          >
+            <source src={assetPath("/brand/collaborate.mp4")} type="video/mp4" />
+          </video>
         </div>
       </section>
 
@@ -95,11 +89,6 @@ export default function CollaboratePage() {
             <p className="eyebrow">How we work</p>
             <h2>Collaboration that starts with reality.</h2>
           </div>
-          <p className="body-copy">
-            This copy is intentionally provisional for v1. The structure is
-            ready for field-specific language once the first partnerships and
-            opportunities are finalized.
-          </p>
         </div>
         <div className="grid-list">
           {pathways.map((pathway) => (
@@ -108,26 +97,6 @@ export default function CollaboratePage() {
               <p>{pathway.copy}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="split-section">
-        <div>
-          <p className="eyebrow">What we can offer</p>
-          <h2>Research capacity for operational questions.</h2>
-        </div>
-        <div>
-          <p className="body-copy">
-            The lab can support early technical scoping, model and sensor
-            evaluation, prototype design, student research projects, proposal
-            development, and evidence-centered discussions about what AI can and
-            cannot do in crisis environments.
-          </p>
-          <p className="body-copy">
-            The goal is not to force a tool into an operation. The goal is to
-            understand the operation deeply enough that the research becomes
-            useful.
-          </p>
         </div>
       </section>
     </div>

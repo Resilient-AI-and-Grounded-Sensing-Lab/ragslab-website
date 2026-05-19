@@ -17,13 +17,11 @@ export default function Home() {
         <div className="section-header">
           <div>
             <p className="eyebrow">Problems we work on</p>
-            <h2>Grounded systems for unforgiving conditions.</h2>
+            {/* <h2>Grounded systems for unforgiving conditions.</h2> */}
           </div>
-          <p className="body-copy">
-            Our research brings together machine learning, sensing, policy, and
-            end-user input to build AI that sees through noise, reasons under
-            uncertainty, and endures outside ideal conditions.
-          </p>
+          {/* <p className="body-copy">
+            Our research brings together machine learning, signal processing, sensing, policy, and end-user input.
+          </p> */}
         </div>
         <ResearchAgenda items={researchAgenda} />
       </section>

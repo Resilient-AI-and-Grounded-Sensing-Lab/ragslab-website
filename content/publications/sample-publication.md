@@ -1,7 +1,7 @@
 ---
-title: "Resilient AI for Grounded Sensing in Crisis Environments"
-authors: "RAGS Lab"
-venue: "Working paper"
+title: "Coming soon!"
+authors: ""
+venue: ""
 year: 2026
 links: ["Coming soon"]
 tags: ["resilient AI", "grounded sensing"]

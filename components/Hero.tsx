@@ -74,10 +74,9 @@ export function Hero() {
         </div>
         <div className="hero-summary">
           <p className="lede">
-            The RAGS Lab builds artificial intelligence that actually works in
-            moments of crisis: chaotic, unpredictable, and unforgiving
-            environments where information is incomplete and lives depend on
-            systems that cannot afford to fail.
+            The RAGS Lab develops foundational methods for perception, reasoning, and learning
+            in AI systems that must operate under uncertainty, adapt to changing conditions,
+            and remain reliable in high-stakes real-world environments.
           </p>
           <div className="button-row">
             <Link className="button" href="/publications">

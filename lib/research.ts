@@ -12,21 +12,21 @@ export const researchAgenda: AgendaItem[] = [
     number: "02",
     title: "Grounded sensing",
     summary:
-      "AI grounded in the physics and limits of sensors, including radar, low-quality audio, imagery, and other difficult signals.",
+      "AI grounded in the physics and limits of sensors, including radar, low-quality audio, other difficult signals.",
     visual: "Perception shaped by the instruments that make evidence visible."
   },
   {
     number: "03",
-    title: "Crisis response",
+    title: "Efficient systems",
     summary:
-      "Systems for unforgiving settings where information is incomplete, time is scarce, and people need reliable support.",
+      "Rapid inference on commodity hardware for when time is scarce, and people need reliable support.",
     visual: "Technology built for moments when every second changes the problem."
   },
   {
     number: "04",
-    title: "End-user alignment",
+    title: "Technology and policy co-design",
     summary:
-      "Research shaped by responders, operators, and policy constraints so prototypes fit real workflows and real risk.",
+      "Shaping technology with policy constraints in mind so prototypes fit real workflows and real risk, and vice versa.",
     visual: "Research loops that begin and end with the people relying on the system."
   }
 ];

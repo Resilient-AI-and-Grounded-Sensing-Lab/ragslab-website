@@ -34,11 +34,10 @@ export default function PeoplePage() {
     <div className="page-shell">
       <section className="compact-page-intro">
         <p className="eyebrow">People</p>
-        <h1>People</h1>
+        <h1>Our team.</h1>
         <p className="body-copy">
-          RAGS Lab brings together researchers interested in resilient AI,
-          grounded sensing, operational constraints, and technologies that can
-          survive contact with real conditions.
+          The RAGS Lab brings together researchers that span disciplinary boundaries
+          who are focused on foundational breakthroughs for real-world problems.
         </p>
       </section>
 
