@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { assetPath } from "@/lib/assets";
 import { siteConfig } from "@/lib/site";
 

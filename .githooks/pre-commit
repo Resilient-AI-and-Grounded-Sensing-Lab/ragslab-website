@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+
+npm run optimize:assets
+
+if ! git diff --quiet -- public/people public/brand; then
+  git add public/people public/brand
+fi

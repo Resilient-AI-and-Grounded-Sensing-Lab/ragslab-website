@@ -3,15 +3,15 @@ import { assetPath } from "@/lib/assets";
 
 const projectVisuals = [
   {
-    image: "/brand/aperture.png",
+    avif: "/brand/aperture.avif",
     className: "project-visual-aperture"
   },
   {
-    image: "/brand/line-drawing.png",
+    avif: "/brand/line-drawing.avif",
     className: "project-visual-field"
   },
   {
-    image: "/brand/pattern.png",
+    avif: "/brand/pattern.avif",
     className: "project-visual-signal"
   }
 ];
@@ -25,7 +25,11 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
         return (
           <article className="project-card" key={project.slug}>
             <div className={`project-visual ${visual.className}`} aria-hidden="true">
-              <img src={assetPath(visual.image)} alt="" />
+              <picture>
+                <source srcSet={assetPath(visual.avif)} type="image/avif" />
+                <source srcSet={assetPath(visual.avif.replace(".avif", ".webp"))} type="image/webp" />
+                <img src={assetPath(visual.avif)} alt="" />
+              </picture>
               <span />
             </div>
             <div className="project-content">

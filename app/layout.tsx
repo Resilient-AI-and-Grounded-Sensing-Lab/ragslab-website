@@ -45,13 +45,13 @@ export const metadata: Metadata = {
 };
 
 const hostGrotesk = localFont({
-  src: "../public/fonts/host-grotesk.ttf",
+  src: "../public/fonts/host-grotesk.woff2",
   variable: "--font-host",
   display: "swap"
 });
 
 const lora = localFont({
-  src: "../public/fonts/lora.ttf",
+  src: "../public/fonts/lora.woff2",
   variable: "--font-lora",
   display: "swap"
 });

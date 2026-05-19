@@ -303,7 +303,7 @@ h3 {
   transition: opacity 180ms var(--ease);
 }
 
-.hero.is-hovered .cursor-pattern {
+.cursor-pattern.is-hovered {
   opacity: 1;
 }
 
@@ -550,9 +550,14 @@ h3 {
   isolation: isolate;
 }
 
+.project-visual picture,
 .project-visual img {
+  display: block;
   width: 100%;
   height: 100%;
+}
+
+.project-visual img {
   min-height: inherit;
   object-fit: cover;
   opacity: 0.64;
