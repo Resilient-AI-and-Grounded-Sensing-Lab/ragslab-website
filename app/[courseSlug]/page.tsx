@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { CompactIntroHeading } from "@/components/CompactIntroHeading";
 import { getCourse, getCourses } from "@/lib/teaching";
 import { siteConfig } from "@/lib/site";
 
@@ -54,11 +55,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
     <div className="page-shell">
       <section className="compact-page-intro course-hero">
         <div>
-          <p className="eyebrow">
-            {course.code} / {course.term}
-          </p>
-          <h1>{course.title}</h1>
-          <p className="lede">{course.summary}</p>
+          <CompactIntroHeading title={course.title} meta={`${course.code} / ${course.term}`} />
         </div>
         <aside className="course-facts" aria-label="Course information">
           <dl>

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Link from "next/link";
+import { SiteHeader } from "@/components/SiteHeader";
 import { assetPath } from "@/lib/assets";
 import { siteConfig, SocialIconName } from "@/lib/site";
+import { getCourses } from "@/lib/teaching";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -87,27 +89,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const courseSlugs = getCourses().map((course) => course.slug);
+
   return (
     <html lang="en" className={`${hostGrotesk.variable} ${lora.variable}`}>
       <body>
         <a className="skip-link" href="#main-content">
           Skip to main content
         </a>
-        <header className="site-header">
-          <div className="site-header-inner">
-            <Link className="brand-mark" href="/" aria-label="RAGS Lab home">
-              <img src={assetPath("/brand/logo-no-text.svg")} alt="" />
-              <span>{siteConfig.name}</span>
-            </Link>
-            <nav aria-label="Primary navigation">
-              {siteConfig.nav.map((item) => (
-                <Link key={item.href} href={item.href}>
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        </header>
+        <SiteHeader courseSlugs={courseSlugs} />
         <main id="main-content">{children}</main>
         <footer className="site-footer">
           <Link className="footer-mark" href="/" aria-label="RAGS Lab home">

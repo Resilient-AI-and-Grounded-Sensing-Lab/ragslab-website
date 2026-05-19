@@ -1,43 +1,23 @@
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
-import { ProjectGrid } from "@/components/ProjectGrid";
-import { ResearchAgenda } from "@/components/ResearchAgenda";
-import { getProjects } from "@/lib/content";
-import { researchAgenda } from "@/lib/research";
+import { ResearchGrid } from "@/components/ResearchGrid";
+import { getResearch } from "@/lib/content";
 
 export default function Home() {
-  const projects = getProjects();
-  const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
+  const research = getResearch().filter((item) => item.featured).slice(0, 4);
 
   return (
     <>
       <Hero />
 
       <section className="section">
-        <div className="section-header">
+        <div className="section-header section-header-compact">
           <div>
-            <p className="eyebrow">Problems we work on</p>
-            {/* <h2>Grounded systems for unforgiving conditions.</h2> */}
+            <p className="eyebrow">Current research</p>
+            <h2 className="sr-only">Current research</h2>
           </div>
-          {/* <p className="body-copy">
-            Our research brings together machine learning, signal processing, sensing, policy, and end-user input.
-          </p> */}
         </div>
-        <ResearchAgenda items={researchAgenda} />
-      </section>
-
-      <section className="section featured-projects-section">
-        <div className="section-header">
-          <div>
-            <p className="eyebrow">Featured projects</p>
-            <h2>From sensor physics to field use.</h2>
-          </div>
-          <p className="body-copy">
-            Current work turns imperfect field signals into AI systems that can
-            reason with uncertainty, operational context, and real constraints.
-          </p>
-        </div>
-        <ProjectGrid projects={featuredProjects} />
+        <ResearchGrid items={research} />
       </section>
 
       <section className="section callout">

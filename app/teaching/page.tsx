@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CompactIntroHeading } from "@/components/CompactIntroHeading";
 import { getCourses } from "@/lib/teaching";
 import { siteConfig } from "@/lib/site";
 
@@ -30,11 +31,7 @@ export default function TeachingPage() {
   return (
     <div className="page-shell">
       <section className="compact-page-intro">
-        <p className="eyebrow">Teaching</p>
-        <h1>Courses.</h1>
-        <p className="lede">
-          Preparing the next generation of technologists solving real-world problems.
-        </p>
+        <CompactIntroHeading title="Teaching" />
       </section>
 
       <section className="section teaching-list" aria-label="Courses">

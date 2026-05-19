@@ -1,4 +1,5 @@
 import { assetPath } from "@/lib/assets";
+import { CompactIntroHeading } from "@/components/CompactIntroHeading";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = {
@@ -30,29 +31,29 @@ const pathways = [
       "We work with end-users to understand where existing AI breaks in the field, and what the operational constraints are."
   },
   {
+    title: "Evaluation and training",
+    copy:
+      "Once we understand where things break, we build detailed evaluations and test protocols to pressure-test future research developments."
+  },
+  {
+    title: "Data and sensing interpretation",
+    copy:
+      "Collecting datasets and grounding modeling in the physics of specific sensors is often necessary, and we work with you to create high-fidelity datasets."
+  },
+  {
     title: "Field-informed prototypes",
     copy:
       "We can translate operational constraints into evaluations, V&V, and research prototypes."
   },
   {
-    title: "Data and sensing interpretation",
-    copy:
-      "We aim to model data that traditionally requires specialized expertise to understand with attention to sensor physics and failure modes."
-  },
-  {
-    title: "Evaluation and training",
-    copy:
-      "We can help pressure-test emerging systems, design realistic evaluation protocols, and brief teams on capabilities and limits."
-  },
-  {
     title: "Student and research partnerships",
     copy:
-      "Prospective students and researchers can connect around open problems in resilient AI, grounded sensing, and deployment."
+      "We collaborate broadly with students, researchers, and companies to find novel solutions to problems and to scale our research."
   },
   {
     title: "Grant and program development",
     copy:
-      "We can partner on proposals where field needs, AI research, and responsible implementation need to move together."
+      "Field-focused work requires targeted funding, so we work with partners to fundraise around promising areas of inquiry."
   }
 ];
 
@@ -60,16 +61,14 @@ export default function CollaboratePage() {
   return (
     <div className="page-shell">
       <section className="compact-page-intro collab-hero">
-        <div>
-          <p className="eyebrow">Collaborate</p>
-          <h1>Bring us the hard parts.</h1>
+        <div className="collab-hero-copy">
+          <CompactIntroHeading title="Collaborate" />
           <p className="lede">
-            We collaborate with first responders, public
-            safety teams, humanitarian operators, warfighters, researchers, and
-            technical partners who need breakthroughs for their environments.
+            We work with partners who have real constraints, messy signals, and
+            operational stakes that standard AI demos ignore.
           </p>
         </div>
-        <div className="collab-panel" aria-hidden="true">
+        <div className="collab-panel">
           <video
             autoPlay
             loop
@@ -79,6 +78,12 @@ export default function CollaboratePage() {
           >
             <source src={assetPath("/brand/collaborate.mp4")} type="video/mp4" />
           </video>
+          <div className="collab-panel-caption">
+            <p className="eyebrow">Field-grounded work</p>
+            <p>
+              As researchers, we prioritize field work to make sure we understand the problems faced by end users.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -86,7 +91,7 @@ export default function CollaboratePage() {
         <div className="section-header">
           <div>
             <p className="eyebrow">How we work</p>
-            <h2>Collaboration that starts with reality.</h2>
+            <h2>Closing the research and deployment loop.</h2>
           </div>
         </div>
         <div className="grid-list">

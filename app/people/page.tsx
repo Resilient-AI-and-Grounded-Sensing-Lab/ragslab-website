@@ -1,4 +1,5 @@
 import { PeopleGrid } from "@/components/PeopleGrid";
+import { CompactIntroHeading } from "@/components/CompactIntroHeading";
 import { getPeople, Person } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
@@ -33,12 +34,7 @@ export default function PeoplePage() {
   return (
     <div className="page-shell">
       <section className="compact-page-intro">
-        <p className="eyebrow">People</p>
-        <h1>Our team.</h1>
-        <p className="body-copy">
-          The RAGS Lab brings together researchers that span disciplinary boundaries
-          who are focused on foundational breakthroughs for real-world problems.
-        </p>
+        <CompactIntroHeading title="People" />
       </section>
 
       <PeopleSection title="Principal Investigator" people={principalInvestigators} />

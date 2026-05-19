@@ -36,7 +36,7 @@ export type Person = {
   image?: string;
 };
 
-export type Project = {
+export type ResearchItem = {
   slug: string;
   title: string;
   summary: string;
@@ -117,8 +117,8 @@ export function getPeople() {
   return readPeopleYaml().sort(comparePeopleByLastName);
 }
 
-export function getProjects() {
-  return readCollection<Project>("projects").sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+export function getResearch() {
+  return readCollection<ResearchItem>("research").sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 }
 
 export function getPublications() {

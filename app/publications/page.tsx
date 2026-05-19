@@ -1,4 +1,5 @@
 import { PublicationsList } from "@/components/Publications";
+import { CompactIntroHeading } from "@/components/CompactIntroHeading";
 import { getPublications } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
@@ -30,12 +31,7 @@ export default function PublicationsPage() {
   return (
     <div className="page-shell">
       <section className="compact-page-intro">
-        <p className="eyebrow">Publications</p>
-        <h1>Research outputs.</h1>
-        <p className="lede">
-          Publications, preprints, and project reports will be collected here as
-          the lab grows.
-        </p>
+        <CompactIntroHeading title="Publications" />
       </section>
 
       <section className="section">
