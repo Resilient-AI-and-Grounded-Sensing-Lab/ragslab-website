@@ -1,73 +1,27 @@
 import fs from "node:fs";
 import path from "node:path";
+import { readYamlFile } from "@/lib/yaml";
 
 const contentRoot = path.join(process.cwd(), "content");
 
-type Primitive = string | number | boolean | string[];
-
-function parseValue(value: string): Primitive {
-  const trimmed = value.trim();
-
-  if (trimmed === "true") return true;
-  if (trimmed === "false") return false;
-  if (/^\d+$/.test(trimmed)) return Number(trimmed);
-  if (trimmed.startsWith("[") && trimmed.endsWith("]")) {
-    return trimmed
-      .slice(1, -1)
-      .split(",")
-      .map((item) => item.trim().replace(/^["']|["']$/g, ""))
-      .filter(Boolean);
-  }
-
-  return trimmed.replace(/^["']|["']$/g, "");
-}
-
-function parseFrontmatter<T extends Record<string, Primitive>>(raw: string) {
-  if (!raw.startsWith("---")) {
-    return { data: {} as Partial<T>, body: raw.trim() };
-  }
-
-  const closing = raw.indexOf("\n---", 3);
-  if (closing === -1) {
-    return { data: {} as Partial<T>, body: raw.trim() };
-  }
-
-  const frontmatter = raw.slice(3, closing).trim();
-  const body = raw.slice(closing + 4).trim();
-  const data = frontmatter.split("\n").reduce<Record<string, Primitive>>((acc, line) => {
-    const separator = line.indexOf(":");
-    if (separator === -1) return acc;
-
-    const key = line.slice(0, separator).trim();
-    const value = line.slice(separator + 1);
-    acc[key] = parseValue(value);
-    return acc;
-  }, {});
-
-  return { data: data as Partial<T>, body };
-}
-
 type ContentRecord<T> = T & {
   slug: string;
-  body: string;
 };
 
-function readCollection<T extends Record<string, Primitive>>(collection: string): ContentRecord<T>[] {
+function readCollection<T extends Record<string, unknown>>(collection: string): ContentRecord<T>[] {
   const collectionPath = path.join(contentRoot, collection);
   if (!fs.existsSync(collectionPath)) return [];
 
   return fs
     .readdirSync(collectionPath)
-    .filter((file) => file.endsWith(".md") || file.endsWith(".mdx"))
+    .filter((file) => file.endsWith(".yaml") || file.endsWith(".yml"))
     .map((file) => {
-      const slug = file.replace(/\.mdx?$/, "");
-      const raw = fs.readFileSync(path.join(collectionPath, file), "utf8");
-      const parsed = parseFrontmatter<T>(raw);
+      const slug = file.replace(/\.ya?ml$/, "");
+      const data = readYamlFile<Partial<T>>(path.join(collectionPath, file), {});
 
       return {
         slug,
-        body: parsed.body,
-        ...parsed.data
+        ...data
       } as ContentRecord<T>;
     });
 }
@@ -84,7 +38,6 @@ export type Person = {
 
 export type Project = {
   slug: string;
-  body: string;
   title: string;
   summary: string;
   status: string;
@@ -96,7 +49,6 @@ export type Project = {
 
 export type Publication = {
   slug: string;
-  body: string;
   title: string;
   authors: string;
   venue: string;
@@ -111,54 +63,6 @@ function slugify(value: string) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
-}
-
-function parseYamlScalar(value: string): Primitive {
-  const trimmed = value.trim();
-  if (!trimmed) return "";
-  if (trimmed === "true") return true;
-  if (trimmed === "false") return false;
-  if (/^\d+$/.test(trimmed)) return Number(trimmed);
-  if (trimmed.startsWith("[") && trimmed.endsWith("]")) {
-    return trimmed
-      .slice(1, -1)
-      .split(",")
-      .map((item) => item.trim().replace(/^["']|["']$/g, ""))
-      .filter(Boolean);
-  }
-
-  return trimmed.replace(/^["']|["']$/g, "");
-}
-
-function parsePeopleYaml(raw: string) {
-  const people: Record<string, Primitive>[] = [];
-  let current: Record<string, Primitive> | null = null;
-
-  raw.split("\n").forEach((rawLine) => {
-    const withoutComment = rawLine.replace(/\s+#.*$/, "");
-    const line = withoutComment.trim();
-    if (!line) return;
-
-    if (line.startsWith("- ")) {
-      if (current) people.push(current);
-      current = {};
-      const remainder = line.slice(2);
-      if (!remainder) return;
-
-      const separator = remainder.indexOf(":");
-      if (separator === -1) return;
-      current[remainder.slice(0, separator).trim()] = parseYamlScalar(remainder.slice(separator + 1));
-      return;
-    }
-
-    if (!current) return;
-    const separator = line.indexOf(":");
-    if (separator === -1) return;
-    current[line.slice(0, separator).trim()] = parseYamlScalar(line.slice(separator + 1));
-  });
-
-  if (current) people.push(current);
-  return people;
 }
 
 function peopleGroupFromFilename(file: string) {
@@ -191,9 +95,10 @@ function readPeopleYaml() {
     .filter((file) => file.endsWith(".yaml") || file.endsWith(".yml"))
     .flatMap((file) => {
       const group = peopleGroupFromFilename(file);
-      const raw = fs.readFileSync(path.join(collectionPath, file), "utf8");
+      const records = readYamlFile<Record<string, unknown>[]>(path.join(collectionPath, file), []);
+      if (!Array.isArray(records)) return [];
 
-      return parsePeopleYaml(raw).map((person, index) => {
+      return records.map((person, index) => {
         const name = String(person.name ?? "");
         return {
           slug: slugify(name || `${group}-${index + 1}`),

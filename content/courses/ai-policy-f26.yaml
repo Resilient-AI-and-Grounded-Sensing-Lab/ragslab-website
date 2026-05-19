@@ -1,0 +1,29 @@
+slug: ai-policy-f26
+code: CMSC 848Y
+term: Fall 2026
+title: AI, Public Policy, and Society
+summary: How does AI shape society? Conversely, how should society shape AI? We examine how policy shapes technology and how technology shapes policy.
+format: Seminar
+meetingTime: Mondays and Wednesdays, 3:00-4:15 PM ET
+location: TBA
+instructor: Ritwik Gupta
+officeHours: TBA
+ta: null
+descriptionHeading: Integrating AI with society with effective policy.
+description:
+  - This course studies how AI systems are built, evaluated, governed, and contested when deployed in public settings.
+  - Students will read technical papers, policy analyses, standards, incident reports, and case studies. The course will span disciplines and be based around discussion.
+outcomesHeading: What students will practice.
+outcomes:
+  - Connect model behavior to institutional, legal, and operational constraints.
+  - Write technical policy briefs for mixed technical and non-technical audiences.
+  - Evaluate AI systems beyond benchmark performance.
+syllabusHeading: Weekly arc.
+syllabusNote: Readings, assignments, and slide links can be replaced as the course is finalized.
+syllabus:
+  - week: Week 1
+    topic: TBA
+    work: TBA
+    slides:
+      title: TBA
+      href: null

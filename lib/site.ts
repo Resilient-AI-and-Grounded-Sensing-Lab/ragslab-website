@@ -9,6 +9,7 @@ export const siteConfig = {
     { href: "/", label: "Home" },
     { href: "/people", label: "People" },
     { href: "/publications", label: "Publications" },
+    { href: "/teaching", label: "Teaching" },
     { href: "/collaborate", label: "Collaborate" }
   ],
   socials: [
