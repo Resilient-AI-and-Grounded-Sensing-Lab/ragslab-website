@@ -18,12 +18,11 @@ export const siteConfig = {
       icon: "github"
     },
     {
-      label: "X/Twitter",
-      href: "https://www.linkedin.com/company/rags-lab",
+      label: "Twitter",
+      href: "https://x.com/Ritwik_G",
       icon: "x-twitter"
     }
   ],
-  collaborationHref: "https://www.linkedin.com/company/rags-lab"
 } as const;
 
 export type SocialIconName = "github" | "linkedin" | "x-twitter";
