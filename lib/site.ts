@@ -3,6 +3,8 @@ export const siteConfig = {
   title: "RAGS Lab",
   description:
     "Resilient AI and Grounded Sensing Lab builds AI and sensing systems for chaotic environments.",
+  url: "https://ragslab.ai",
+  ogImage: "/og-image.png",
   nav: [
     { href: "/", label: "Home" },
     { href: "/people", label: "People" },

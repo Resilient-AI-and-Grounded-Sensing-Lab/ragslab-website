@@ -3,7 +3,25 @@ import { assetPath } from "@/lib/assets";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = {
-  title: "Collaborate | RAGS Lab"
+  title: "Collaborate",
+  description:
+    "Partner with RAGS Lab on field-informed AI systems, sensing workflows, evaluation, and research programs.",
+  alternates: {
+    canonical: "/collaborate"
+  },
+  openGraph: {
+    title: "Collaborate | RAGS Lab",
+    description:
+      "Partner with RAGS Lab on field-informed AI systems, sensing workflows, evaluation, and research programs.",
+    url: "/collaborate",
+    images: [siteConfig.ogImage]
+  },
+  twitter: {
+    title: "Collaborate | RAGS Lab",
+    description:
+      "Partner with RAGS Lab on field-informed AI systems, sensing workflows, evaluation, and research programs.",
+    images: [siteConfig.ogImage]
+  }
 };
 
 const pathways = [

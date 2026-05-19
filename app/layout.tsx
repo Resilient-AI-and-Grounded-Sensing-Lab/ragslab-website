@@ -6,8 +6,42 @@ import { siteConfig, SocialIconName } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: siteConfig.title,
-  description: siteConfig.description
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.title}`
+  },
+  description: siteConfig.description,
+  alternates: {
+    canonical: "/"
+  },
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/apple-touch-icon.png"
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    siteName: siteConfig.title,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.title} logo`
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage]
+  }
 };
 
 const hostGrotesk = localFont({

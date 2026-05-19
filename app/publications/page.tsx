@@ -1,13 +1,31 @@
 import { PublicationsList } from "@/components/Publications";
 import { getPublications } from "@/lib/content";
+import { siteConfig } from "@/lib/site";
 
 export const metadata = {
-  title: "Publications | RAGS Lab"
+  title: "Publications",
+  description:
+    "Browse RAGS Lab publications, preprints, and project reports.",
+  alternates: {
+    canonical: "/publications"
+  },
+  openGraph: {
+    title: "Publications | RAGS Lab",
+    description:
+      "Browse RAGS Lab publications, preprints, and project reports.",
+    url: "/publications",
+    images: [siteConfig.ogImage]
+  },
+  twitter: {
+    title: "Publications | RAGS Lab",
+    description:
+      "Browse RAGS Lab publications, preprints, and project reports.",
+    images: [siteConfig.ogImage]
+  }
 };
 
 export default function PublicationsPage() {
   const publications = getPublications();
-  const featured = publications.filter((publication) => publication.featured);
 
   return (
     <div className="page-shell">

@@ -1,8 +1,27 @@
 import { PeopleGrid } from "@/components/PeopleGrid";
 import { getPeople, Person } from "@/lib/content";
+import { siteConfig } from "@/lib/site";
 
 export const metadata = {
-  title: "People | RAGS Lab"
+  title: "People",
+  description:
+    "Meet the RAGS Lab researchers working on resilient AI, grounded sensing, and real-world deployment.",
+  alternates: {
+    canonical: "/people"
+  },
+  openGraph: {
+    title: "People | RAGS Lab",
+    description:
+      "Meet the RAGS Lab researchers working on resilient AI, grounded sensing, and real-world deployment.",
+    url: "/people",
+    images: [siteConfig.ogImage]
+  },
+  twitter: {
+    title: "People | RAGS Lab",
+    description:
+      "Meet the RAGS Lab researchers working on resilient AI, grounded sensing, and real-world deployment.",
+    images: [siteConfig.ogImage]
+  }
 };
 
 export default function PeoplePage() {
