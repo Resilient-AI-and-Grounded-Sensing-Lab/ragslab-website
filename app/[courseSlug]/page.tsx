@@ -105,22 +105,6 @@ export default async function CoursePage({ params }: CoursePageProps) {
         </div>
       </section>
 
-      <section className="section course-outcomes">
-        <div className="section-header">
-          <div>
-            <p className="eyebrow">Learning goals</p>
-            <h2>{course.outcomesHeading}</h2>
-          </div>
-        </div>
-        <div className="grid-list">
-          {course.outcomes.map((outcome) => (
-            <article className="collab-card" key={outcome}>
-              <p>{outcome}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="section">
         <div className="section-header">
           <div>

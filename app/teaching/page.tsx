@@ -42,15 +42,16 @@ export default function TeachingPage() {
               <span>{course.code}</span>
             </div>
             <div className="course-card-body">
-              <h2>{course.title}</h2>
+              <h2>
+                <Link className="course-title-link" href={`/${course.slug}`}>
+                  {course.title}
+                </Link>
+              </h2>
               <p>{course.summary}</p>
               <div className="tag-list">
                 <span className="tag">{course.format}</span>
                 <span className="tag">{course.meetingTime}</span>
               </div>
-              <Link className="text-link" href={`/${course.slug}`}>
-                Course site
-              </Link>
             </div>
           </article>
         ))}

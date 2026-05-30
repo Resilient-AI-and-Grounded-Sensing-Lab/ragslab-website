@@ -13,17 +13,42 @@ descriptionHeading: Integrating AI with society with effective policy.
 description:
   - This course studies how AI systems are built, evaluated, governed, and contested when deployed in public settings.
   - Students will read technical papers, policy analyses, standards, incident reports, and case studies. The course will span disciplines and be based around discussion.
-outcomesHeading: What students will practice.
-outcomes:
-  - Connect model behavior to institutional, legal, and operational constraints.
-  - Write technical policy briefs for mixed technical and non-technical audiences.
-  - Evaluate AI systems beyond benchmark performance.
+  - The course will alternate between a didactic seminar where students translate their own research into concrete policy recommendations, and guest lectures from global policy leaders.
 syllabusHeading: Weekly arc.
 syllabusNote: Readings, assignments, and slide links can be replaced as the course is finalized.
 syllabus:
-  - week: Week 1
-    topic: TBA
-    work: TBA
+  - week: Weeks 1-5
+    topic: "Unit 1: Becoming dual-fluent in technology and policy"
+    work: |
+      This unit introduces the conceptual foundations needed to engage seriously with technology policy. Students will learn how technical knowledge enters policy debates, how policymakers reason under uncertainty, and how institutions translate research findings into objects of strateg and governance.
+
+      The unit will introduce core policy and international relations concepts, including strategic stability, deterrence, security dilemmas, dual-use technology, and diffusion. Students will examine how technical developments move from research communities into broader political and strategic debates.
+
+      The unit will also introduce approaches to measuring, evaluating, and governing AI systems. Students will consider the role of benchmarks, risk frameworks, standards, and responsible AI practices in shaping how technical systems are understood by policymakers and the public.
+    slides:
+      title: TBA
+      href: null
+
+  - week: Weeks 6-10
+    topic: "Unit 2: National security and the geopolitics of AI"
+    work: |
+      This unit examines the national security and geopolitical implications of AI and related technologies. Students will analyze how emerging technical capabilities interact with military institutions, strategic competition, crisis dynamics, and the distribution of power among states.
+
+      Topics will include autonomous weapons systems, decision-support systems, nuclear risk, command and control, cyber capabilities, economic security, export controls, supply chains, and compute infrastructure.
+
+      The unit will also examine the role of private firms in national security and geopolitical debates, and therefore industrial policy. Students will consider how governments, companies, and other institutions shape the development, adoption, and governance of strategically important technologies.
+    slides:
+      title: TBA
+      href: null
+
+  - week: Weeks 11-15
+    topic: "Unit 3: Domestic governance, climate, power, and equity"
+    work: |
+      This unit examines how AI systems affect domestic institutions, public services, infrastructure, and the distribution of power within society. Students will consider how technical systems interact with law, public administration, and democratic accountability.
+
+      Topics will include the use of AI in law enforcement, the growth of datacenters, the relationship of AI with climate risk, and the social and economic consequences of AI deployment.
+
+      The unit will conclude by asking who benefits from AI, who bears its costs, and who has meaningful influence over how these systems are designed and deployed. Students will consider how technical and policy choices can be co-designed to advance public goals while managing risk, uncertainty, and unequal impacts.
     slides:
       title: TBA
       href: null

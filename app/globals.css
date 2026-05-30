@@ -809,15 +809,23 @@ h3 {
   font-size: clamp(1.8rem, 4vw, 3.3rem);
 }
 
+.course-title-link {
+  display: inline-block;
+  width: fit-content;
+}
+
+.course-title-link:hover,
+.course-title-link:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--firecracker);
+  text-underline-offset: 0.12em;
+}
+
 .course-card p,
 .course-copy p,
 .syllabus-item p {
   color: var(--ink-soft);
   font-family: var(--font-lora), Georgia, serif;
-}
-
-.course-card .text-link {
-  width: fit-content;
 }
 
 .course-hero {
@@ -862,8 +870,7 @@ h3 {
   color: var(--ink-soft);
 }
 
-.course-section h2,
-.course-outcomes h2 {
+.course-section h2 {
   font-size: clamp(2rem, 5vw, 4.4rem);
 }
 
@@ -875,10 +882,6 @@ h3 {
 .course-copy p {
   margin-bottom: 0;
   font-size: 1.1rem;
-}
-
-.course-outcomes .collab-card p {
-  margin-bottom: 0;
 }
 
 .syllabus-list {

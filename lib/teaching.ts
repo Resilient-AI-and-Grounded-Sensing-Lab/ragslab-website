@@ -31,8 +31,6 @@ export type Course = {
   };
   descriptionHeading: string;
   description: string[];
-  outcomesHeading: string;
-  outcomes: string[];
   syllabusHeading: string;
   syllabusNote: string;
   syllabus: CourseSession[];
