@@ -1,7 +1,0 @@
-title: Reliable Inference Under Pressure
-summary: We design AI systems that stay useful when inputs are partial, time is short, and operating conditions shift, with an emphasis on uncertainty, fallback behavior, and deployable compute budgets.
-status: Ongoing
-areas: []
-lead: RAGS Lab
-featured: true
-order: 3

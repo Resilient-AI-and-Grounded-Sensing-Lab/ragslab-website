@@ -1,0 +1,7 @@
+title: Inference with Constraints
+summary: Operational environments necessitate that AI systems operate under constraints. We research methods by which generative AI models can comply with constraints, thereby improving performance in degraded environments.
+status: Ongoing
+areas: []
+lead: RAGS Lab
+featured: true
+order: 3
