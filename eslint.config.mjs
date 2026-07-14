@@ -12,5 +12,11 @@ export default defineConfig([
       "@next/next/no-img-element": "off"
     }
   },
-  globalIgnores([".next/**", "out/**", "node_modules/**", "next-env.d.ts"])
+  globalIgnores([
+    ".next/**",
+    "out/**",
+    "node_modules/**",
+    "public/swr32-explorer/**",
+    "next-env.d.ts"
+  ])
 ]);

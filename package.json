@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run images:generate && next dev",
+    "build": "npm run images:generate && next build",
+    "images:generate": "node scripts/optimize-assets.mjs",
     "lint": "eslint .",
-    "optimize:assets": "node scripts/optimize-assets.mjs",
+    "optimize:assets": "npm run images:generate",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { readYamlFile } from "@/lib/yaml";
+import { getProgressiveImageAsset, type ProgressiveImageAsset } from "@/lib/progressive-images";
 
 const contentRoot = path.join(process.cwd(), "content");
 
@@ -33,7 +34,7 @@ export type Person = {
   description: string;
   email?: string;
   website?: string;
-  image?: string;
+  image?: ProgressiveImageAsset;
 };
 
 export type ResearchItem = {
@@ -80,12 +81,6 @@ function comparePeopleByLastName(a: Person, b: Person) {
   return a.name.localeCompare(b.name);
 }
 
-function resolvePeopleImagePath(image: string) {
-  if (!image) return "";
-  if (image.startsWith("http://") || image.startsWith("https://") || image.startsWith("/")) return image;
-  return `/people/${image}`;
-}
-
 function readPeopleYaml() {
   const collectionPath = path.join(contentRoot, "people");
   if (!fs.existsSync(collectionPath)) return [];
@@ -107,7 +102,7 @@ function readPeopleYaml() {
           description: String(person.description ?? ""),
           email: String(person.email ?? ""),
           website: String(person.website ?? ""),
-          image: resolvePeopleImagePath(String(person.image ?? ""))
+          image: person.image ? getProgressiveImageAsset(String(person.image)) : undefined
         } satisfies Person;
       });
     });

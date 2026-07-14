@@ -37,7 +37,7 @@ export default function PeoplePage() {
         <CompactIntroHeading title="People" />
       </section>
 
-      <PeopleSection title="Principal Investigator" people={principalInvestigators} />
+      <PeopleSection title="Principal Investigator" people={principalInvestigators} prioritizeFirst />
       <PeopleSection title="Post-Docs" people={postDocs} />
       <PeopleSection title="Ph.D. Students" people={phdStudents} />
     </div>
@@ -46,17 +46,19 @@ export default function PeoplePage() {
 
 function PeopleSection({
   title,
-  people
+  people,
+  prioritizeFirst = false
 }: {
   title: string;
   people: Person[];
+  prioritizeFirst?: boolean;
 }) {
   if (!people.length) return null;
 
   return (
     <section className="people-section">
       <h2>{title}</h2>
-      <PeopleGrid people={people} />
+      <PeopleGrid people={people} prioritizeFirst={prioritizeFirst} />
     </section>
   );
 }

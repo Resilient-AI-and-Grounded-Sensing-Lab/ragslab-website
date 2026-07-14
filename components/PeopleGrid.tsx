@@ -1,5 +1,5 @@
 import { Person } from "@/lib/content";
-import { assetPath } from "@/lib/assets";
+import { ProgressiveImage } from "@/components/ProgressiveImage";
 
 function initials(name: string) {
   return name
@@ -15,13 +15,27 @@ function safeEmail(email: string) {
   return `${name} [at] ${domain.replace(/\./g, " [dot] ")}`;
 }
 
-export function PeopleGrid({ people }: { people: Person[] }) {
+export function PeopleGrid({
+  people,
+  prioritizeFirst = false
+}: {
+  people: Person[];
+  prioritizeFirst?: boolean;
+}) {
   return (
     <div className="grid-list">
-      {people.map((person) => (
+      {people.map((person, index) => (
         <article className="person-card" key={person.slug}>
           {person.image ? (
-            <img className="avatar avatar-image" src={assetPath(person.image)} alt="" />
+            <ProgressiveImage
+              asset={person.image}
+              className="avatar avatar-image"
+              alt=""
+              sizes="72px"
+              loading={prioritizeFirst && index === 0 ? "eager" : "lazy"}
+              fetchPriority={prioritizeFirst && index === 0 ? "high" : "auto"}
+              objectFit="cover"
+            />
           ) : (
             <span className="avatar" aria-hidden="true">
               {initials(person.name)}
