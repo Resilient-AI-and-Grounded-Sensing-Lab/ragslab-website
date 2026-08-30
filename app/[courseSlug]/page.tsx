@@ -95,7 +95,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
 
       <section className="split-section course-section">
         <div>
-          <p className="eyebrow">Course description</p>
+          <p className="section-label">Course description</p>
           <h2>{course.descriptionHeading}</h2>
         </div>
         <div className="course-copy">
@@ -108,7 +108,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
       <section className="section">
         <div className="section-header">
           <div>
-            <p className="eyebrow">Syllabus</p>
+            <p className="section-label">Syllabus</p>
             <h2>{course.syllabusHeading}</h2>
           </div>
           <p className="body-copy">{course.syllabusNote}</p>

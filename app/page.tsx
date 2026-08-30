@@ -13,7 +13,7 @@ export default function Home() {
       <section className="section">
         <div className="section-header section-header-compact">
           <div>
-            <p className="eyebrow">Current research</p>
+            <p className="section-label">Current research</p>
             <h2 className="sr-only">Current research</h2>
           </div>
         </div>
@@ -21,7 +21,7 @@ export default function Home() {
       </section>
 
       <section className="section callout">
-        <p className="eyebrow">Partner with the lab</p>
+        <p className="section-label">Partner with the lab</p>
         <h2>Bring hard problems from the field.</h2>
         <p className="body-copy">
           We collaborate with first responders, emergency managers, public

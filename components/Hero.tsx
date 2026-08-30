@@ -8,7 +8,7 @@ export function Hero() {
       <HeroCursorPattern />
       <div className="hero-copy">
         <div className="hero-title">
-          <p className="eyebrow">Resilient AI and Grounded Sensing Lab</p>
+          <p className="hero-label">Resilient AI and Grounded Sensing Lab</p>
           <h1>AI for chaos.</h1>
         </div>
         <div className="hero-summary">

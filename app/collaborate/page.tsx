@@ -79,7 +79,7 @@ export default function CollaboratePage() {
             <source src={assetPath("/brand/collaborate.mp4")} type="video/mp4" />
           </video>
           <div className="collab-panel-caption">
-            <p className="eyebrow">Field-grounded work</p>
+            <p className="media-caption-label">Field-grounded work</p>
             <p>
               As researchers, we prioritize field work to make sure we understand the problems faced by end users.
             </p>
@@ -90,7 +90,7 @@ export default function CollaboratePage() {
       <section className="section">
         <div className="section-header">
           <div>
-            <p className="eyebrow">How we work</p>
+            <p className="section-label">How we work</p>
             <h2>Closing the research and deployment loop.</h2>
           </div>
         </div>

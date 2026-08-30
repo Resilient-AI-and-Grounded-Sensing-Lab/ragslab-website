@@ -35,7 +35,7 @@ export default function PublicationsPage() {
       </section>
 
       <section className="section">
-        <p className="eyebrow">All publications</p>
+        <p className="section-label">All publications</p>
         <PublicationsList publications={publications} />
       </section>
     </div>
