@@ -25,6 +25,7 @@ export type CourseAssignment = {
 export type CourseSession = {
   week?: string;
   dates?: string;
+  calendarNote?: string;
   unit?: string;
   topic: string;
   work?: string;

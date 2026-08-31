@@ -243,6 +243,12 @@ export default async function CoursePage({ params }: CoursePageProps) {
                 {session.unit ? <p className="syllabus-unit">{session.unit}</p> : null}
                 <h3>{session.topic}</h3>
                 {session.work ? <p>{session.work}</p> : null}
+                {session.calendarNote ? (
+                  <p className="session-calendar-note">
+                    <span className="session-resource-label">Calendar</span>
+                    <span>{session.calendarNote}</span>
+                  </p>
+                ) : null}
                 {session.readings?.length ? (
                   <div className="session-block">
                     <h4>Readings</h4>

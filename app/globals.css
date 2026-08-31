@@ -1027,6 +1027,7 @@ a.reading-title:focus-visible {
   text-transform: uppercase;
 }
 
+.syllabus-item .session-calendar-note,
 .session-slides {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -1037,6 +1038,10 @@ a.reading-title:focus-visible {
   padding: 0.45rem 0.65rem;
   border-left: 3px solid var(--line);
   background: rgba(26, 26, 26, 0.035);
+}
+
+.syllabus-item .session-calendar-note {
+  margin: 0.75rem 0 0;
 }
 
 @media (max-width: 880px) {
