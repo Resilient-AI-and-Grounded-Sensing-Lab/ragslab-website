@@ -1,11 +1,9 @@
 import Link from "next/link";
 import { assetPath } from "@/lib/assets";
-import { HeroCursorPattern } from "@/components/HeroCursorPattern";
 
 export function Hero() {
   return (
-    <section className="hero pattern-field">
-      <HeroCursorPattern />
+    <section className="hero">
       <div className="hero-copy">
         <div className="hero-title">
           <p className="hero-label">Resilient AI and Grounded Sensing Lab</p>
