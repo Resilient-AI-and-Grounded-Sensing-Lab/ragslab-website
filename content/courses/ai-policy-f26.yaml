@@ -7,48 +7,441 @@ format: Seminar
 meetingTime: Mondays and Wednesdays, 3:00-4:15 PM ET
 location: ESJ 0215
 instructor: Ritwik Gupta
-officeHours: TBA
+officeHours: Thursdays 2:00-3:00 PM ET at IRB 5126
 ta: null
+
 descriptionHeading: Integrating AI with society with effective policy.
 description:
-  - This course studies how AI systems are built, evaluated, governed, and contested when deployed in public settings.
-  - Students will read technical papers, policy analyses, standards, incident reports, and case studies. The course will span disciplines and be based around discussion.
-  - The course will alternate between a didactic seminar where students translate their own research into concrete policy recommendations, and guest lectures from global policy leaders.
+  - This course is for AI Ph.D. and M.S. students who want to understand how their research relates to public policy. The goal is for students to become policy-literate AI researchers who can advise decision makers.
+  - Most of the course will focus on AI. We will also study other engineering fields which have had massive policy impacts to see how others have contended with national security, scientific self-governance, public participation, and international regulation.
+  - The course will alternate between seminar discussions, policy exercises, writing workshops, and guest lectures. Students will use ideas from political science, international relations, and public policy to analyze technical research and its consequences.
+
+assignmentsHeading: Assignments.
+assignmentsNote: Students will write four response papers during the semester. Papers may address any course topic and do not need to build on one another. We will discuss possible paper topics during class; no separate topic proposal is due.
+
+assignments:
+
+  - title: Seminar preparation and participation
+    due: Ongoing
+    weight: 20
+    description: |
+      Students are expected to complete the readings and participate in seminar discussions and policy exercises. When reading technical papers, students should be prepared to discuss five questions:
+
+      1. What was technically novel?
+      2. What capability, cost, or bottleneck changed?
+      3. What assumptions and evaluation conditions limit the result?
+      4. What changes when the method is deployed outside the paper?
+      5. Which policy claims follow from the paper, and which do not?
+
+      When reading policy papers, students should be prepared to discuss five corresponding questions:
+
+      1. How is the policy problem being defined?
+      2. What causal mechanism does the author claim?
+      3. Who has authority to act?
+      4. What instrument is proposed, and what constrains implementation?
+      5. Who benefits, who bears the costs, and what evidence could change the conclusion?
+
+  - title: Response papers
+    due: September 16, October 14, November 4, and December 9, 2026
+    weight: 80
+    description: |
+      Students will submit four response papers, each worth an equal share of the response-paper grade. Each paper may address any topic raised by the course. Students may focus on one reading, connect several readings from the same week, or develop an argument that draws on material from across the course.
+      Response papers should go beyond summarizing the readings. A paper might critically assess an author's argument, explain how two or more readings relate to one another, develop an original causal claim, identify an important unanswered question, propose a way to study that question, or offer a policy recommendation.
+      Each response paper should be no longer than four pages, approximately 1,000-1,200 words, double-spaced with 12-point font and 1-inch margins. Papers are due by midnight on the assigned class day.
+
 syllabusHeading: Weekly arc.
-syllabusNote: Readings, assignments, and slide links can be replaced as the course is finalized.
+
 syllabus:
-  - week: Weeks 1-5
-    topic: "Unit 1: Becoming dual-fluent in technology and policy"
-    work: |
-      This unit introduces the conceptual foundations needed to engage seriously with technology policy. Students will learn how technical knowledge enters policy debates, how policymakers reason under uncertainty, and how institutions translate research findings into objects of strategy and governance.
 
-      The unit will introduce core policy and international relations concepts, including strategic stability, deterrence, security dilemmas, dual-use technology, and diffusion. Students will examine how technical developments move from research communities into broader political and strategic debates.
-
-      The unit will also introduce approaches to measuring, evaluating, and governing AI systems. Students will consider the role of benchmarks, risk frameworks, standards, and responsible AI practices in shaping how technical systems are understood by policymakers and the public.
+  - dates: August 31 and September 2, 2026
+    unit: "Unit 1: Becoming dual-fluent in technology and policy"
+    topic: From technical result to policy problem
+    readings:
+      - type: Policy
+        authors: Deborah A. Stone
+        title: Causal Stories and the Formation of Policy Agendas
+        publication: Political Science Quarterly 104, no. 2 (1989)
+        href: https://www.jstor.org/stable/2151585
+      - type: Technical
+        authors: Tom B. Brown et al.
+        title: Language Models Are Few-Shot Learners
+        publication: NeurIPS (2020), selected sections
+        href: https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html
+      - type: Bridge
+        authors: Emily M. Bender et al.
+        title: "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?"
+        publication: FAccT (2021)
+        href: https://dl.acm.org/doi/10.1145/3442188.3445922
+    assignment: null
     slides:
       title: TBA
       href: null
 
-  - week: Weeks 6-10
-    topic: "Unit 2: National security and the geopolitics of AI"
-    work: |
-      This unit examines the national security and geopolitical implications of AI and related technologies. Students will analyze how emerging technical capabilities interact with military institutions, strategic competition, crisis dynamics, and the distribution of power among states.
-
-      Topics will include autonomous weapons systems, decision-support systems, nuclear risk, command and control, cyber capabilities, economic security, export controls, supply chains, and compute infrastructure.
-
-      The unit will also examine the role of private firms in national security and geopolitical debates, and therefore industrial policy. Students will consider how governments, companies, and other institutions shape the development, adoption, and governance of strategically important technologies.
+  - dates: September 9, 2026
+    calendarNote: No class September 7 (Labor Day).
+    unit: "Unit 1: Becoming dual-fluent in technology and policy"
+    topic: Fission and strategic mobilization
+    readings:
+      - type: Technical
+        authors: Lise Meitner and O. R. Frisch
+        title: "Disintegration of Uranium by Neutrons: A New Type of Nuclear Reaction"
+        publication: Nature 143 (1939)
+        href: https://www.nature.com/articles/143239a0
+      - type: Bridge
+        authors: Otto Frisch and Rudolf Peierls
+        title: Memorandum on the Properties of a Radioactive Super-bomb
+        publication: Frisch-Peierls memorandum (1940)
+        href: https://www.atomicarchive.com/resources/documents/beginnings/frisch-peierls.html
+      - type: Policy
+        authors: Scott D. Sagan
+        title: Why Do States Build Nuclear Weapons? Three Models in Search of a Bomb
+        publication: International Security 21, no. 3 (1996/97)
+        href: https://direct.mit.edu/isec/article/21/3/54/11555/Why-Do-States-Build-Nuclear-Weapons-Three-Models
+    assignment: Paper topics discussed in class
     slides:
       title: TBA
       href: null
 
-  - week: Weeks 11-15
-    topic: "Unit 3: Domestic governance, climate, power, and equity"
-    work: |
-      This unit examines how AI systems affect domestic institutions, public services, infrastructure, and the distribution of power within society. Students will consider how technical systems interact with law, public administration, and democratic accountability.
+  - dates: September 14 and 16, 2026
+    unit: "Unit 1: Becoming dual-fluent in technology and policy"
+    topic: Recombinant DNA and scientific self-governance
+    readings:
+      - type: Technical
+        authors: Stanley N. Cohen et al.
+        title: Construction of Biologically Functional Bacterial Plasmids In Vitro
+        publication: PNAS 70, no. 11 (1973)
+        href: https://www.pnas.org/doi/10.1073/pnas.70.11.3240
+      - type: Bridge
+        authors: Paul Berg et al.
+        title: Potential Biohazards of Recombinant DNA Molecules
+        publication: Science 185, no. 4148 (1974)
+        href: https://www.science.org/doi/10.1126/science.185.4148.303
+      - type: Bridge
+        authors: Paul Berg et al.
+        title: Asilomar Conference on Recombinant DNA Molecules
+        publication: Science 188, no. 4192 (1975)
+        href: https://www.science.org/doi/10.1126/science.1056638
+      - type: Policy
+        authors: J. Benjamin Hurlbut
+        title: "Taking Responsibility: Asilomar and Its Legacy"
+        publication: Science (2025)
+        href: https://www.science.org/doi/abs/10.1126/science.adv3132
+    assignment: Response Paper 1 due September 16
+    slides:
+      title: TBA
+      href: null
 
-      Topics will include the use of AI in law enforcement, the growth of datacenters, the relationship of AI with climate risk, and the social and economic consequences of AI deployment.
+  - dates: September 21 and 23, 2026
+    unit: "Unit 1: Becoming dual-fluent in technology and policy"
+    topic: CFCs and international regulation
+    readings:
+      - type: Technical
+        authors: Mario J. Molina and F. Sherwood Rowland
+        title: "Stratospheric Sink for Chlorofluoromethanes: Chlorine Atom-Catalysed Destruction of Ozone"
+        publication: Nature 249 (1974)
+        href: https://www.nature.com/articles/249810a0
+      - type: Technical
+        authors: J. C. Farman, B. G. Gardiner, and J. D. Shanklin
+        title: Large Losses of Total Ozone in Antarctica Reveal Seasonal ClOx/NOx Interaction
+        publication: Nature 315 (1985)
+        href: https://www.nature.com/articles/315207a0
+      - type: Policy
+        authors: Cass R. Sunstein
+        title: "Of Montreal and Kyoto: A Tale of Two Protocols"
+        publication: Harvard Environmental Law Review 31 (2007), selected sections
+        href: https://dash.harvard.edu/entities/publication/73120378-c0a4-6bd4-e053-0100007fdf3b
+    assignment: null
+    slides:
+      title: TBA
+      href: null
 
-      The unit will conclude by asking who benefits from AI, who bears its costs, and who has meaningful influence over how these systems are designed and deployed. Students will consider how technical and policy choices can be co-designed to advance public goals while managing risk, uncertainty, and unequal impacts.
+  - dates: September 28 and 30, 2026
+    unit: "Unit 1: Becoming dual-fluent in technology and policy"
+    topic: "Comparing governance pathways: measurement, benchmarks, and risk"
+    readings:
+      - type: Technical
+        authors: Rylan Schaeffer, Brando Miranda, and Sanmi Koyejo
+        title: Are Emergent Abilities of Large Language Models a Mirage?
+        publication: NeurIPS (2023)
+        href: https://openreview.net/forum?id=ITw9edRDlD
+      - type: Technical
+        authors: Inioluwa Deborah Raji et al.
+        title: AI and the Everything in the Whole Wide World Benchmark
+        publication: NeurIPS Datasets and Benchmarks (2021)
+        href: https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/084b6fbb10729ed4da8c3d3f5a3ae7c9-Abstract-round2.html
+      - type: Policy
+        authors: National Research Council
+        title: "Understanding Risk: Informing Decisions in a Democratic Society"
+        publication: National Academies Press (1996), summary and Chapter 1
+        href: https://www.nationalacademies.org/publications/5138
+      - type: Standard
+        authors: National Institute of Standards and Technology
+        title: AI Risk Management Framework
+        publication: Current version, selected Govern and Map sections
+        href: https://www.nist.gov/itl/ai-risk-management-framework
+    assignment: Comparative exercise in class
+    slides:
+      title: TBA
+      href: null
+
+  - dates: October 5 and 7, 2026
+    unit: "Unit 2: National security and the geopolitics of AI"
+    topic: AI as a strategic technology
+    readings:
+      - type: Technical
+        authors: David Silver et al.
+        title: Mastering the Game of Go with Deep Neural Networks and Tree Search
+        publication: Nature 529 (2016)
+        href: https://www.nature.com/articles/nature16961
+      - type: Policy
+        authors: Robert Jervis
+        title: Cooperation Under the Security Dilemma
+        publication: World Politics 30, no. 2 (1978), selected sections
+        href: https://www.jstor.org/stable/2009958
+      - type: Policy
+        authors: Michael C. Horowitz
+        title: Artificial Intelligence, International Competition, and the Balance of Power
+        publication: Texas National Security Review 1, no. 3 (2018)
+        href: https://tnsr.org/2018/05/artificial-intelligence-international-competition-and-the-balance-of-power/
+    assignment: null
+    slides:
+      title: TBA
+      href: null
+
+  - dates: October 14, 2026
+    calendarNote: No class October 12 (Fall Break).
+    unit: "Unit 2: National security and the geopolitics of AI"
+    topic: Machine vision, targeting, and proliferation
+    readings:
+      - type: Technical
+        authors: Joseph Redmon et al.
+        title: "You Only Look Once: Unified, Real-Time Object Detection"
+        publication: CVPR (2016)
+        href: https://openaccess.thecvf.com/content_cvpr_2016/html/Redmon_You_Only_Look_CVPR_2016_paper.html
+      - type: Bridge
+        authors: Ritwik Gupta et al.
+        title: "Open-Source Assessments of AI Capabilities: The Proliferation of AI Analysis Tools, Replicating Competitor Models, and the Zhousidun Dataset"
+        publication: Berkeley Risk and Security Lab research preprint (2024)
+        href: https://arxiv.org/abs/2405.12167
+      - type: Policy
+        authors: Michael C. Horowitz
+        title: "When Speed Kills: Lethal Autonomous Weapon Systems, Deterrence and Stability"
+        publication: Journal of Strategic Studies 42, no. 6 (2019)
+        href: https://www.tandfonline.com/doi/abs/10.1080/01402390.2019.1621174
+    assignment: Response Paper 2 due October 14
+    slides:
+      title: TBA
+      href: null
+
+  - dates: October 19 and 21, 2026
+    unit: "Unit 2: National security and the geopolitics of AI"
+    topic: AI, NC3, and human-machine decision making
+    readings:
+      - type: Technical
+        authors: Lisanne Bainbridge
+        title: Ironies of Automation
+        publication: Automatica 19, no. 6 (1983)
+        href: https://www.sciencedirect.com/science/article/pii/0005109883900468
+      - type: Technical
+        authors: Gagan Bansal et al.
+        title: Does the Whole Exceed Its Parts? The Effect of AI Explanations on Complementary Team Performance
+        publication: CHI (2021)
+        href: https://dl.acm.org/doi/10.1145/3411764.3445717
+      - type: Bridge
+        authors: Edward Geist and Andrew J. Lohn
+        title: How Might Artificial Intelligence Affect the Risk of Nuclear War?
+        publication: RAND Corporation (2018)
+        href: https://www.rand.org/pubs/perspectives/PE296.html
+      - type: Policy
+        authors: James M. Acton
+        title: "Escalation through Entanglement: How the Vulnerability of Command-and-Control Systems Raises the Risks of an Inadvertent Nuclear War"
+        publication: International Security 43, no. 1 (2018)
+        href: https://direct.mit.edu/isec/article/43/1/56/12199/Escalation-through-Entanglement-How-the
+    assignment: null
+    slides:
+      title: TBA
+      href: null
+
+  - dates: October 26 and 28, 2026
+    unit: "Unit 2: National security and the geopolitics of AI"
+    topic: Compute as a governance proxy
+    readings:
+      - type: Technical
+        authors: Jordan Hoffmann et al.
+        title: Training Compute-Optimal Large Language Models
+        publication: NeurIPS (2022)
+        href: https://proceedings.neurips.cc/paper_files/paper/2022/hash/c1e2faff6f588870935f114ebe04a3e5-Abstract-Conference.html
+      - type: Bridge
+        authors: Ben Buchanan
+        title: The AI Triad and What It Means for National Security Strategy
+        publication: Center for Security and Emerging Technology (2020)
+        href: https://cset.georgetown.edu/publication/the-ai-triad-and-what-it-means-for-national-security-strategy/
+      - type: Bridge
+        authors: Lennart Heim et al.
+        title: Computing Power and the Governance of Artificial Intelligence
+        publication: Research paper (2024), selected sections
+        href: https://arxiv.org/abs/2402.08797
+      - type: Policy
+        authors: Ritwik Gupta and Andrew W. Reddie
+        title: "The LLM Mirage: Economic Interests and the Subversion of Weaponization Controls"
+        publication: ACM (2026)
+        href: https://dl.acm.org/doi/10.1145/3805689.3806538
+    assignment: null
+    slides:
+      title: TBA
+      href: null
+
+  - dates: November 2 and 4, 2026
+    unit: "Unit 2: National security and the geopolitics of AI"
+    topic: "Compute governance: chokepoints, efficiency, and circumvention"
+    readings:
+      - type: Technical
+        authors: Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, and Yuxiong He
+        title: "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models"
+        publication: SC (2020)
+        href: https://dl.acm.org/doi/10.5555/3433701.3433727
+      - type: Bridge
+        authors: Lennart Heim et al.
+        title: "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation"
+        publication: Oxford Martin School (2024)
+        href: https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation
+      - type: Policy
+        authors: Henry Farrell and Abraham L. Newman
+        title: Weaponized Interdependence
+        publication: International Security 44, no. 1 (2019)
+        href: https://direct.mit.edu/isec/article/44/1/42/12237/Weaponized-Interdependence-How-Global-Economic
+      - type: Bridge
+        authors: Ritwik Gupta and Andrew W. Reddie
+        title: Accelerating the Evolution of AI Export Controls
+        publication: Tech Policy Press (2023)
+        href: https://techpolicy.press/accelerating-the-evolution-of-ai-export-controls
+    assignment: Response Paper 3 due November 4
+    slides:
+      title: TBA
+      href: null
+
+  - dates: November 9 and 11, 2026
+    unit: "Unit 3: Domestic governance, climate, power, and equity"
+    topic: Automated decisions, public administration, and due process
+    readings:
+      - type: Technical
+        authors: Alexandra Chouldechova, Diana Benavides-Prado, Oleksandr Fialko, and Rhema Vaithianathan
+        title: A Case Study of Algorithm-Assisted Decision Making in Child Maltreatment Hotline Screening Decisions
+        publication: FAT* (2018)
+        href: https://proceedings.mlr.press/v81/chouldechova18a.html
+      - type: Policy
+        authors: Danielle Keats Citron
+        title: Technological Due Process
+        publication: Washington University Law Review 85, no. 6 (2008), selected sections
+        href: https://openscholarship.wustl.edu/law_lawreview/vol85/iss6/2/
+      - type: Standard
+        authors: U.S. Government Accountability Office
+        title: "Artificial Intelligence: An Accountability Framework for Federal Agencies and Other Entities"
+        publication: GAO-21-519SP (2021), selected sections
+        href: https://www.gao.gov/products/gao-21-519sp
+    assignment: null
+    slides:
+      title: TBA
+      href: null
+
+  - dates: November 16 and 18, 2026
+    unit: "Unit 3: Domestic governance, climate, power, and equity"
+    topic: Civil rights, discrimination, and auditing
+    readings:
+      - type: Technical
+        authors: Moritz Hardt, Eric Price, and Nathan Srebro
+        title: Equality of Opportunity in Supervised Learning
+        publication: NeurIPS (2016)
+        href: https://arxiv.org/abs/1610.02413
+      - type: Technical
+        authors: Joy Buolamwini and Timnit Gebru
+        title: Gender Shades
+        publication: FAT* (2018)
+        href: https://proceedings.mlr.press/v81/buolamwini18a.html
+      - type: Policy
+        authors: Solon Barocas and Andrew D. Selbst
+        title: Big Data's Disparate Impact
+        publication: California Law Review 104 (2016), selected sections
+        href: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899
+    assignment: null
+    slides:
+      title: TBA
+      href: null
+
+  - dates: November 23, 2026
+    calendarNote: No class November 25 (Thanksgiving Recess).
+    unit: "Unit 3: Domestic governance, climate, power, and equity"
+    topic: Labor, markets, and productivity
+    readings:
+      - type: Technical
+        authors: Long Ouyang et al.
+        title: Training Language Models to Follow Instructions with Human Feedback
+        publication: NeurIPS (2022)
+        href: https://proceedings.neurips.cc/paper_files/paper/2022/hash/b1efde53be364a73914f58805a001731-Abstract-Conference.html
+      - type: Policy
+        authors: David H. Autor
+        title: Why Are There Still So Many Jobs? The History and Future of Workplace Automation
+        publication: Journal of Economic Perspectives 29, no. 3 (2015)
+        href: https://www.aeaweb.org/articles?id=10.1257%2Fjep.29.3.3
+      - type: Bridge
+        authors: Shakked Noy and Whitney Zhang
+        title: Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence
+        publication: Science 381, no. 6654 (2023)
+        href: https://www.science.org/doi/10.1126/science.adh2586
+    assignment: null
+    slides:
+      title: TBA
+      href: null
+
+  - dates: November 30 and December 2, 2026
+    unit: "Unit 3: Domestic governance, climate, power, and equity"
+    topic: Datacenters, energy, and environmental effects
+    readings:
+      - type: Technical
+        authors: Emma Strubell, Ananya Ganesh, and Andrew McCallum
+        title: Energy and Policy Considerations for Deep Learning in NLP
+        publication: ACL (2019)
+        href: https://aclanthology.org/P19-1355/
+      - type: Technical
+        authors: Alexandra Sasha Luccioni, Yacine Jernite, and Emma Strubell
+        title: "Power Hungry Processing: Watts Driving the Cost of AI Deployment?"
+        publication: FAccT (2024)
+        href: https://dl.acm.org/doi/10.1145/3630106.3658542
+      - type: Policy
+        authors: International Energy Agency
+        title: Key Questions on Energy and AI
+        publication: IEA (2026), executive summary and selected sections
+        href: https://www.iea.org/reports/key-questions-on-energy-and-ai
+      - type: Policy
+        authors: Eugénie Dugoua
+        title: "Induced Innovation and International Environmental Agreements: Evidence from the Ozone Regime"
+        publication: Review of Economics and Statistics 107, no. 6 (2025)
+        href: https://direct.mit.edu/rest/article/107/6/1620/118336/Induced-Innovation-and-International-Environmental
+    assignment: null
+    slides:
+      title: TBA
+      href: null
+
+  - dates: December 7 and 9, 2026
+    unit: "Unit 3: Domestic governance, climate, power, and equity"
+    topic: Synthetic media, evidence, and democratic legitimacy
+    readings:
+      - type: Technical
+        authors: Ye Jia et al.
+        title: Transfer Learning from Speaker Verification to Multispeaker Text-to-Speech Synthesis
+        publication: NeurIPS (2018)
+        href: https://proceedings.neurips.cc/paper/2018/hash/6832a7b24bc06775d02b7406880b93fc-Abstract.html
+      - type: Policy
+        authors: Robert Chesney and Danielle Citron
+        title: "Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security"
+        publication: California Law Review 107 (2019), selected sections
+        href: https://scholarship.law.bu.edu/faculty_scholarship/640/
+      - type: Bridge
+        authors: Sarah Barrington, Emily A. Cooper, and Hany Farid
+        title: People Are Poorly Equipped to Detect AI-Powered Voice Clones
+        publication: Scientific Reports 15 (2025)
+        href: https://www.nature.com/articles/s41598-025-94170-3
+    assignment: Response Paper 4 due December 9
     slides:
       title: TBA
       href: null

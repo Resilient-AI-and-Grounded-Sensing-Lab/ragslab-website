@@ -3,15 +3,34 @@ import path from "node:path";
 import { readYamlFile } from "@/lib/yaml";
 
 export type CourseSlide = {
+  title: string | null;
+  href: string | null;
+};
+
+export type CourseReading = {
+  type: string;
+  authors: string;
   title: string;
-  href: string;
+  publication: string;
+  href: string | null;
+};
+
+export type CourseAssignment = {
+  title: string;
+  due: string;
+  weight: number;
+  description: string;
 };
 
 export type CourseSession = {
-  week: string;
+  week?: string;
+  dates?: string;
+  unit?: string;
   topic: string;
-  work: string;
-  slides?: CourseSlide;
+  work?: string;
+  readings?: CourseReading[];
+  assignment?: string | null;
+  slides?: CourseSlide | null;
 };
 
 export type Course = {
@@ -31,6 +50,9 @@ export type Course = {
   };
   descriptionHeading: string;
   description: string[];
+  assignmentsHeading?: string;
+  assignmentsNote?: string;
+  assignments?: CourseAssignment[];
   syllabusHeading: string;
   syllabusNote: string;
   syllabus: CourseSession[];
