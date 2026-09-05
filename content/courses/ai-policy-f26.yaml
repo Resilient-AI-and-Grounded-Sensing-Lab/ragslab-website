@@ -79,25 +79,25 @@ syllabus:
 
   - dates: September 9, 2026
     calendarNote: No class September 7 (Labor Day).
-    unit: "Unit 1: Becoming dual-fluent in technology and policy"
-    topic: Fission and strategic mobilization
+    unit: "Unit 2: National security and the geopolitics of AI"
+    topic: Guest Lecture - Andrew Reddie, Research Assistant Professor, University of California, Berkeley
     readings:
       - type: Technical
-        authors: Lise Meitner and O. R. Frisch
-        title: "Disintegration of Uranium by Neutrons: A New Type of Nuclear Reaction"
-        publication: Nature 143 (1939)
-        href: https://www.nature.com/articles/143239a0
-      - type: Bridge
-        authors: Otto Frisch and Rudolf Peierls
-        title: Memorandum on the Properties of a Radioactive Super-bomb
-        publication: Frisch-Peierls memorandum (1940)
-        href: https://www.atomicarchive.com/resources/documents/beginnings/frisch-peierls.html
+        authors: David Silver et al.
+        title: Mastering the Game of Go with Deep Neural Networks and Tree Search
+        publication: Nature 529 (2016)
+        href: https://www.nature.com/articles/nature16961
       - type: Policy
-        authors: Scott D. Sagan
-        title: Why Do States Build Nuclear Weapons? Three Models in Search of a Bomb
-        publication: International Security 21, no. 3 (1996/97)
-        href: https://www-jstor-org.proxy-um.researchport.umd.edu/stable/2539273?seq=1
-    assignment: Paper topics discussed in class
+        authors: Robert Jervis
+        title: Cooperation Under the Security Dilemma
+        publication: World Politics 30, no. 2 (1978), selected sections
+        href: https://www.jstor.org/stable/2009958
+      - type: Policy
+        authors: Michael C. Horowitz
+        title: Artificial Intelligence, International Competition, and the Balance of Power
+        publication: Texas National Security Review 1, no. 3 (2018)
+        href: https://tnsr.org/2018/05/artificial-intelligence-international-competition-and-the-balance-of-power/
+    assignment: null
     slides:
       title: TBA
       href: null
@@ -133,7 +133,7 @@ syllabus:
 
   - dates: September 21 and 23, 2026
     unit: "Unit 1: Becoming dual-fluent in technology and policy"
-    topic: Guest Lecture - Maria Molina, Assistant Professor, Atmospheric and Oceanic Science
+    topic: Guest Lectures - Maria Molina, Assistant Professor, Atmospheric and Oceanic Science; Marissa Ramirez de Chanlatte, Principal Investor, Playground Global
     readings:
       - type: Technical
         authors: Mario J. Molina and F. Sherwood Rowland
@@ -185,28 +185,29 @@ syllabus:
       href: null
 
   - dates: October 5 and 7, 2026
-    unit: "Unit 2: National security and the geopolitics of AI"
-    topic: AI as a strategic technology
+    unit: "Unit 1: Becoming dual-fluent in technology and policy"
+    topic: Fission and strategic mobilization
     readings:
       - type: Technical
-        authors: David Silver et al.
-        title: Mastering the Game of Go with Deep Neural Networks and Tree Search
-        publication: Nature 529 (2016)
-        href: https://www.nature.com/articles/nature16961
+        authors: Lise Meitner and O. R. Frisch
+        title: "Disintegration of Uranium by Neutrons: A New Type of Nuclear Reaction"
+        publication: Nature 143 (1939)
+        href: https://www.nature.com/articles/143239a0
+      - type: Bridge
+        authors: Otto Frisch and Rudolf Peierls
+        title: Memorandum on the Properties of a Radioactive Super-bomb
+        publication: Frisch-Peierls memorandum (1940)
+        href: https://www.atomicarchive.com/resources/documents/beginnings/frisch-peierls.html
       - type: Policy
-        authors: Robert Jervis
-        title: Cooperation Under the Security Dilemma
-        publication: World Politics 30, no. 2 (1978), selected sections
-        href: https://www.jstor.org/stable/2009958
-      - type: Policy
-        authors: Michael C. Horowitz
-        title: Artificial Intelligence, International Competition, and the Balance of Power
-        publication: Texas National Security Review 1, no. 3 (2018)
-        href: https://tnsr.org/2018/05/artificial-intelligence-international-competition-and-the-balance-of-power/
-    assignment: null
+        authors: Scott D. Sagan
+        title: Why Do States Build Nuclear Weapons? Three Models in Search of a Bomb
+        publication: International Security 21, no. 3 (1996/97)
+        href: https://www-jstor-org.proxy-um.researchport.umd.edu/stable/2539273?seq=1
+    assignment: Paper topics discussed in class
     slides:
       title: TBA
       href: null
+
 
   - dates: October 14, 2026
     calendarNote: No class October 12 (Fall Break).
