@@ -31,7 +31,7 @@ export type CourseSession = {
   work?: string;
   readings?: CourseReading[];
   assignment?: string | null;
-  slides?: CourseSlide | null;
+  slides?: CourseSlide | CourseSlide[] | null;
 };
 
 export type Course = {

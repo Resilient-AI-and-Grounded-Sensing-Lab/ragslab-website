@@ -74,8 +74,10 @@ syllabus:
         href: https://dl.acm.org/doi/10.1145/3442188.3445922
     assignment: null
     slides:
-      title: TBA
-      href: null
+      - title: Course Intro
+        href: https://drive.google.com/file/d/1gdm9q4-IcDZX-DfKf9dhVlOl3asWFzhA/view?usp=sharing
+      - title: Policy Basics
+        href: https://drive.google.com/file/d/1AZjD_CbU4Nkv_KBnNHEc8c0vS7_jPpFE/view?usp=sharing
 
   - dates: September 9, 2026
     calendarNote: No class September 7 (Labor Day).
@@ -99,8 +101,8 @@ syllabus:
         href: https://tnsr.org/2018/05/artificial-intelligence-international-competition-and-the-balance-of-power/
     assignment: null
     slides:
-      title: TBA
-      href: null
+      - title: Andrew's Slides (accessible to UMD logins only)
+        href: https://drive.google.com/file/d/1v05D9isPbduALb7cKpG4E2G5g3S7vvu4/view?usp=sharing
 
   - dates: September 14 and 16, 2026
     unit: "Unit 1: Becoming dual-fluent in technology and policy"
@@ -128,8 +130,8 @@ syllabus:
         href: https://www.science.org/doi/abs/10.1126/science.adv3132
     assignment: Response Paper 1 due September 16
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null
 
   - dates: September 21 and 23, 2026
     unit: "Unit 1: Becoming dual-fluent in technology and policy"
@@ -152,8 +154,8 @@ syllabus:
         href: https://dash.harvard.edu/entities/publication/73120378-c0a4-6bd4-e053-0100007fdf3b
     assignment: null
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null
 
   - dates: September 28 and 30, 2026
     unit: "Unit 1: Becoming dual-fluent in technology and policy"
@@ -181,8 +183,8 @@ syllabus:
         href: https://www.nist.gov/itl/ai-risk-management-framework
     assignment: Comparative exercise in class
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null
 
   - dates: October 5 and 7, 2026
     unit: "Unit 1: Becoming dual-fluent in technology and policy"
@@ -205,8 +207,8 @@ syllabus:
         href: https://www-jstor-org.proxy-um.researchport.umd.edu/stable/2539273?seq=1
     assignment: Paper topics discussed in class
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null
 
 
   - dates: October 14, 2026
@@ -231,8 +233,8 @@ syllabus:
         href: https://www.tandfonline.com/doi/abs/10.1080/01402390.2019.1621174
     assignment: Response Paper 2 due October 14
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null
 
   - dates: October 19 and 21, 2026
     unit: "Unit 2: National security and the geopolitics of AI"
@@ -260,8 +262,8 @@ syllabus:
         href: https://direct.mit.edu/isec/article/43/1/56/12199/Escalation-through-Entanglement-How-the
     assignment: null
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null
 
   - dates: October 26 and 28, 2026
     unit: "Unit 2: National security and the geopolitics of AI"
@@ -289,8 +291,8 @@ syllabus:
         href: https://dl.acm.org/doi/10.1145/3805689.3806538
     assignment: null
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null
 
   - dates: November 2 and 4, 2026
     unit: "Unit 2: National security and the geopolitics of AI"
@@ -318,8 +320,8 @@ syllabus:
         href: https://techpolicy.press/accelerating-the-evolution-of-ai-export-controls
     assignment: Response Paper 3 due November 4
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null
 
   - dates: November 9 and 11, 2026
     unit: "Unit 3: Domestic governance, climate, and impacts"
@@ -342,8 +344,8 @@ syllabus:
         href: https://www.gao.gov/products/gao-21-519sp
     assignment: null
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null
 
   - dates: November 16 and 18, 2026
     unit: "Unit 3: Domestic governance, climate, and impacts"
@@ -366,8 +368,8 @@ syllabus:
         href: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899
     assignment: null
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null
 
   - dates: November 23, 2026
     calendarNote: No class November 25 (Thanksgiving Recess).
@@ -391,8 +393,8 @@ syllabus:
         href: https://www.science.org/doi/10.1126/science.adh2586
     assignment: null
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null
 
   - dates: November 30 and December 2, 2026
     unit: "Unit 3: Domestic governance, climate, and impacts"
@@ -420,8 +422,8 @@ syllabus:
         href: https://direct.mit.edu/rest/article/107/6/1620/118336/Induced-Innovation-and-International-Environmental
     assignment: null
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null
 
   - dates: December 7 and 9, 2026
     unit: "Unit 3: Domestic governance, climate, and impacts"
@@ -444,5 +446,5 @@ syllabus:
         href: https://www.nature.com/articles/s41598-025-94170-3
     assignment: Response Paper 4 due December 9
     slides:
-      title: TBA
-      href: null
+      - title: TBA
+        href: null

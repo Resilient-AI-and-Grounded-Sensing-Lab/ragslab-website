@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
-import { getCourse, getCourses } from "@/lib/teaching";
+import { type CourseSession, getCourse, getCourses } from "@/lib/teaching";
 import { siteConfig } from "@/lib/site";
 
 type CoursePageProps = {
@@ -63,6 +63,36 @@ function CourseLongform({ text }: { text: string }) {
   flushParagraph();
   flushNumberedItems();
   return content;
+}
+
+function SessionSlides({ session }: { session: CourseSession }) {
+  const slides = Array.isArray(session.slides)
+    ? session.slides
+    : session.slides ? [session.slides] : [];
+
+  return (
+    <div className="session-slides">
+      <span className="session-resource-label">Slides</span>
+      <div className="session-slide-links">
+        {slides.length ? slides.map((slide, index) => (
+          slide.href ? (
+            <a
+              className="text-link"
+              href={slide.href}
+              key={index}
+              aria-label={`${slide.title ?? "Slides"} for ${session.topic}`}
+            >
+              {slide.title ?? "Slides"}
+            </a>
+          ) : (
+            <span className="empty-note" key={index}>
+              {slide.title ?? "Posted after class"}
+            </span>
+          )
+        )) : <span className="empty-note">Posted after class</span>}
+      </div>
+    </div>
+  );
 }
 
 const readingTypeOrder = ["technical", "policy", "bridge", "standard"];
@@ -278,20 +308,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
                     <span>{session.assignment}</span>
                   </p>
                 ) : null}
-                <div className="session-slides">
-                  <span className="session-resource-label">Slides</span>
-                  {session.slides?.href ? (
-                    <a
-                      className="text-link"
-                      href={session.slides.href}
-                      aria-label={`Slides for ${session.topic}`}
-                    >
-                      {session.slides.title ?? "Slides"}
-                    </a>
-                  ) : (
-                    <span className="empty-note">{session.slides?.title ?? "Posted after class"}</span>
-                  )}
-                </div>
+                <SessionSlides session={session} />
               </div>
             </article>
           ))}

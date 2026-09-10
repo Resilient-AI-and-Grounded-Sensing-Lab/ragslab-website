@@ -1040,6 +1040,11 @@ a.reading-title:focus-visible {
   background: rgba(26, 26, 26, 0.035);
 }
 
+.session-slide-links {
+  display: grid;
+  gap: 0.4rem;
+}
+
 .syllabus-item .session-calendar-note {
   margin: 0.75rem 0 0;
 }
