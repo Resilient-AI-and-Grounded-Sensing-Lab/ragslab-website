@@ -18,3 +18,8 @@
   website: "https://www.linkedin.com/in/cj-nygard-31ab16224"
   image: "cj.jpg"
   description: "AI systems, synthetic aperture techniques, computational imaging"
+- name: "Eliana Johns"
+  email: "ejjohns@umd.edu"
+  website: "https://www.linkedin.com/in/elianajohns"
+  image: "eliana.jpg"
+  description: "AI policy, OSINT, non-proliferation"
