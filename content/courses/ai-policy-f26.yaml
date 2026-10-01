@@ -187,32 +187,6 @@ syllabus:
         href: null
 
   - dates: October 5 and 7, 2026
-    unit: "Unit 1: Becoming dual-fluent in technology and policy"
-    topic: Fission and strategic mobilization
-    readings:
-      - type: Technical
-        authors: Lise Meitner and O. R. Frisch
-        title: "Disintegration of Uranium by Neutrons: A New Type of Nuclear Reaction"
-        publication: Nature 143 (1939)
-        href: https://www.nature.com/articles/143239a0
-      - type: Bridge
-        authors: Otto Frisch and Rudolf Peierls
-        title: Memorandum on the Properties of a Radioactive Super-bomb
-        publication: Frisch-Peierls memorandum (1940)
-        href: https://www.atomicarchive.com/resources/documents/beginnings/frisch-peierls.html
-      - type: Policy
-        authors: Scott D. Sagan
-        title: Why Do States Build Nuclear Weapons? Three Models in Search of a Bomb
-        publication: International Security 21, no. 3 (1996/97)
-        href: https://www-jstor-org.proxy-um.researchport.umd.edu/stable/2539273?seq=1
-    assignment: Paper topics discussed in class
-    slides:
-      - title: TBA
-        href: null
-
-
-  - dates: October 14, 2026
-    calendarNote: No class October 12 (Fall Break).
     unit: "Unit 2: National security and the geopolitics of AI"
     topic: Machine vision, targeting, and proliferation
     readings:
@@ -236,9 +210,11 @@ syllabus:
       - title: TBA
         href: null
 
-  - dates: October 19 and 21, 2026
-    unit: "Unit 2: National security and the geopolitics of AI"
-    topic: AI, NC3, and human-machine decision making
+
+  - dates: October 14, 2026
+    calendarNote: No class October 12 (Fall Break).
+    unit: "Unit 1: Becoming dual-fluent in technology and policy"
+    topic: Guest Lecture - Brandon Cortino, Senior Associate, Institute for Security and Technology on AI-NC3
     readings:
       - type: Technical
         authors: Lisanne Bainbridge
@@ -261,6 +237,31 @@ syllabus:
         publication: International Security 43, no. 1 (2018)
         href: https://direct.mit.edu/isec/article/43/1/56/12199/Escalation-through-Entanglement-How-the
     assignment: null
+    slides:
+      - title: TBA
+        href: null
+
+
+  - dates: October 19 and 21, 2026
+    unit: "Unit 2: National security and the geopolitics of AI"
+    topic: Nuclear basics - to be changed
+    readings:
+      - type: Technical
+        authors: Lise Meitner and O. R. Frisch
+        title: "Disintegration of Uranium by Neutrons: A New Type of Nuclear Reaction"
+        publication: Nature 143 (1939)
+        href: https://www.nature.com/articles/143239a0
+      - type: Bridge
+        authors: Otto Frisch and Rudolf Peierls
+        title: Memorandum on the Properties of a Radioactive Super-bomb
+        publication: Frisch-Peierls memorandum (1940)
+        href: https://www.atomicarchive.com/resources/documents/beginnings/frisch-peierls.html
+      - type: Policy
+        authors: Scott D. Sagan
+        title: Why Do States Build Nuclear Weapons? Three Models in Search of a Bomb
+        publication: International Security 21, no. 3 (1996/97)
+        href: https://www-jstor-org.proxy-um.researchport.umd.edu/stable/2539273?seq=1
+    assignment: Paper topics discussed in class
     slides:
       - title: TBA
         href: null
@@ -325,6 +326,30 @@ syllabus:
 
   - dates: November 9 and 11, 2026
     unit: "Unit 3: Domestic governance, climate, and impacts"
+    topic: Civil rights, discrimination, and auditing + guest lecture by Gustavo Flores-Macias, Dean of the UMD School of Public Policy
+    readings:
+      - type: Technical
+        authors: Moritz Hardt, Eric Price, and Nathan Srebro
+        title: Equality of Opportunity in Supervised Learning
+        publication: NeurIPS (2016)
+        href: https://arxiv.org/abs/1610.02413
+      - type: Technical
+        authors: Joy Buolamwini and Timnit Gebru
+        title: Gender Shades
+        publication: FAT* (2018)
+        href: https://proceedings.mlr.press/v81/buolamwini18a.html
+      - type: Policy
+        authors: Solon Barocas and Andrew D. Selbst
+        title: Big Data's Disparate Impact
+        publication: California Law Review 104 (2016), selected sections
+        href: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899
+    assignment: null
+    slides:
+      - title: TBA
+        href: null
+
+  - dates: November 16 and 18, 2026
+    unit: "Unit 3: Domestic governance, climate, and impacts"
     topic: Automated decisions, public administration, and due process
     readings:
       - type: Technical
@@ -342,30 +367,6 @@ syllabus:
         title: "Artificial Intelligence: An Accountability Framework for Federal Agencies and Other Entities"
         publication: GAO-21-519SP (2021), selected sections
         href: https://www.gao.gov/products/gao-21-519sp
-    assignment: null
-    slides:
-      - title: TBA
-        href: null
-
-  - dates: November 16 and 18, 2026
-    unit: "Unit 3: Domestic governance, climate, and impacts"
-    topic: Civil rights, discrimination, and auditing
-    readings:
-      - type: Technical
-        authors: Moritz Hardt, Eric Price, and Nathan Srebro
-        title: Equality of Opportunity in Supervised Learning
-        publication: NeurIPS (2016)
-        href: https://arxiv.org/abs/1610.02413
-      - type: Technical
-        authors: Joy Buolamwini and Timnit Gebru
-        title: Gender Shades
-        publication: FAT* (2018)
-        href: https://proceedings.mlr.press/v81/buolamwini18a.html
-      - type: Policy
-        authors: Solon Barocas and Andrew D. Selbst
-        title: Big Data's Disparate Impact
-        publication: California Law Review 104 (2016), selected sections
-        href: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899
     assignment: null
     slides:
       - title: TBA
