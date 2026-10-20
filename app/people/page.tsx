@@ -30,6 +30,7 @@ export default function PeoplePage() {
   const principalInvestigators = people.filter((person) => person.group === "pi");
   const postDocs = people.filter((person) => person.group === "post-docs");
   const phdStudents = people.filter((person) => person.group === "phd-students");
+  const fellows = people.filter((person) => person.group == "fellows")
 
   return (
     <div className="page-shell">
@@ -40,6 +41,7 @@ export default function PeoplePage() {
       <PeopleSection title="Principal Investigator" people={principalInvestigators} prioritizeFirst />
       <PeopleSection title="Post-Docs" people={postDocs} />
       <PeopleSection title="Ph.D. Students" people={phdStudents} />
+      <PeopleSection title="Fellows" people={fellows} />
     </div>
   );
 }
