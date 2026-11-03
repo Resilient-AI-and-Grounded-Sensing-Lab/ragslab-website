@@ -1,0 +1,12 @@
+title: 'Tinted Frames: Question Framing Blinds Vision-Language Models'
+authors: Wan-Cyuan Fan, Jiayun Luo, Declan Kutscher, Leonid Sigal, Ritwik Gupta
+venue: Conference on Empirical Methods in Natural Language Processing (EMNLP) 2026
+year: 2026
+links:
+  - label: Project
+    url: https://davidhalladay.github.io/tinted_frames_demo/
+  - label: Paper
+    url: https://arxiv.org/abs/2603.19203
+  - label: Code
+    url: https://github.com/davidhalladay/Tinted-Frames
+image: /publications/tinted-frames.webp

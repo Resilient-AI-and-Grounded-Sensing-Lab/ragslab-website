@@ -1,0 +1,14 @@
+title: 'See, Say, and Segment: Teaching LMMs to Overcome False Premises'
+authors: >-
+  Tsung-Han Wu, Giscard Biamby, David Chan, Lisa Dunlap, Ritwik Gupta, Xudong Wang, Joseph E.
+  Gonzalez, Trevor Darrell
+venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024
+year: 2024
+links:
+  - label: Project
+    url: https://see-say-segment.github.io/
+  - label: Paper
+    url: https://arxiv.org/abs/2312.08366
+  - label: Code
+    url: https://github.com/see-say-segment/sesame
+image: /publications/sesame.webp

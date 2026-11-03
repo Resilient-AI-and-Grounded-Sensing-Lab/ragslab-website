@@ -51,12 +51,14 @@ export type ResearchItem = {
 export type Publication = {
   slug: string;
   title: string;
+  image: string;
   authors: string;
   venue: string;
   year: number;
-  links: string[];
-  tags: string[];
-  featured: boolean;
+  links: {
+    label: string;
+    url: string;
+  }[];
 };
 
 function slugify(value: string) {

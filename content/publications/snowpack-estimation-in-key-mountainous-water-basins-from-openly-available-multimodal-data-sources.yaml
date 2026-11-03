@@ -1,0 +1,12 @@
+title: Snowpack Estimation in Key Mountainous Water Basins from Openly-Available, Multimodal Data Sources
+authors: >-
+  Malachy Moran, Kayla Woputz, Derrick Hee, Manuela Girotto, Paolo D'Odorico, Ritwik Gupta, Daniel
+  Feldman, Puya Vahabi, Alberto Todeschini, Colorado J Reed
+venue: CVPR 2022 Workshop on Multimodal Learning for Earth and Environment
+year: 2022
+links:
+  - label: Paper
+    url: https://arxiv.org/pdf/2208.04246.pdf
+  - label: Code
+    url: https://github.com/Seiris21/ucb2022.snowcast
+image: /publications/snowpack.webp

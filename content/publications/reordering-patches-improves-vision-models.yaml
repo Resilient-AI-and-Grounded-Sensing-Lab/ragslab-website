@@ -1,0 +1,12 @@
+title: REOrdering Patches Improves Vision Models
+authors: Declan Kutscher, David M. Chan, Yutong Bai, Trevor Darrell, Ritwik Gupta
+venue: Neural Information Processing Systems (NeurIPS) 2025
+year: 2025
+links:
+  - label: Project
+    url: https://d3tk.github.io/REOrder/
+  - label: Paper
+    url: https://arxiv.org/abs/2505.23751
+  - label: Code
+    url: https://github.com/d3tk/REOrder
+image: /publications/reorder.webp

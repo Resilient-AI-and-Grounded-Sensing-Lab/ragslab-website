@@ -1,0 +1,17 @@
+title: 'Creating xBD: A Dataset for Assessing Building Damage from Satellite Imagery'
+authors: >-
+  Ritwik Gupta, Bryce Goodman, Nirav Patel, Ricky Hosfelt, Sandra Sajeev, Eric Heim, Jigar Doshi,
+  Keane Lucas, Howie Choset, Matthew Gaston
+venue: >-
+  Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops
+  2019
+year: 2019
+links:
+  - label: Project
+    url: https://www.xview2.org/
+  - label: Paper
+    url: >-
+      https://openaccess.thecvf.com/content_CVPRW_2019/papers/cv4gc/Gupta_Creating_xBD_A_Dataset_for_Assessing_Building_Damage_from_Satellite_CVPRW_2019_paper.pdf
+  - label: Code
+    url: https://github.com/DIUx-xView/xView2_baseline
+image: /publications/creatingxbd.webp

@@ -1,0 +1,16 @@
+title: 'xView3-SAR: Detecting Dark Fishing Activity Using Synthetic Aperture Radar Imagery'
+authors: >-
+  Ritwik Gupta, Fernando Paolo, Tsu-ting Tim Lin, Bryce Goodman, Nirav Patel, Daniel Kuster, David
+  Kroodsma, Jared Dunnmon
+venue: NeurIPS 2022
+year: 2022
+links:
+  - label: Project
+    url: https://iuu.xview.us/
+  - label: Paper
+    url: https://arxiv.org/abs/2206.00897
+  - label: Code
+    url: https://github.com/DIUx-xView/xview3-reference/
+  - label: Video
+    url: https://youtu.be/RPnUqmSyZ6Q
+image: /publications/xview3.webp

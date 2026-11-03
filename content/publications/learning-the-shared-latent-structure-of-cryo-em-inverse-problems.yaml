@@ -1,0 +1,12 @@
+title: Learning the Shared Latent Structure of Cryo-EM Inverse Problems
+authors: >-
+  Nithin Chalapathi, Theo Sternlieb, Ethan Han, Sonya M Hanson, Pilar Cossio, Aditi S Krishnapriyan,
+  Ritwik Gupta
+venue: arXiv preprint
+year: 2026
+links:
+  - label: Paper
+    url: https://arxiv.org/abs/2610.22523
+  - label: Code
+    url: https://github.com/nithinvc/EMber
+image: /publications/ember.webp

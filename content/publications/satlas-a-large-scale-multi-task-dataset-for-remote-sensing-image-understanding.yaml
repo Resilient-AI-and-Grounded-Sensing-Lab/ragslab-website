@@ -1,0 +1,10 @@
+title: 'Satlas: A Large-Scale, Multi-Task Dataset for Remote Sensing Image Understanding'
+authors: Favyen Bastani, Piper Wolters, Ritwik Gupta, Joe Ferdinando, Aniruddha Kembhavi
+venue: International Conference on Computer Vision (ICCV) 2023
+year: 2023
+links:
+  - label: Project
+    url: https://satlas.allenai.org/
+  - label: Paper
+    url: https://arxiv.org/abs/2211.15660
+image: /publications/satlas.webp

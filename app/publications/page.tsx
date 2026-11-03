@@ -34,10 +34,9 @@ export default function PublicationsPage() {
         <CompactIntroHeading title="Publications" />
       </section>
 
-      <section className="section">
-        <p className="section-label">All publications</p>
+      <div className="section">
         <PublicationsList publications={publications} />
-      </section>
+      </div>
     </div>
   );
 }

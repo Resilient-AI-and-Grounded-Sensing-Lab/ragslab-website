@@ -1,0 +1,14 @@
+title: 'WiSoSuper: Benchmarking Super-Resolution Methods on Wind and Solar Data'
+authors: Rupa Kurinchi-Vendhan, Björn Lütjens, Ritwik Gupta, Lucien Werner, Dava Newman
+venue: Climate Change AI Workshop at NeurIPS 2021
+year: 2021
+links:
+  - label: Project
+    url: https://rupakv.com/wisosuper.html
+  - label: Paper
+    url: https://arxiv.org/abs/2109.08770
+  - label: Code
+    url: https://github.com/RupaKurinchiVendhan/WiSoSuper
+  - label: Video
+    url: https://www.youtube.com/watch?v=YUwmfqVKBMY
+image: /publications/wisosuper.webp

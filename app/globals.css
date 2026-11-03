@@ -621,17 +621,53 @@ h3 {
   font-size: 0.95rem;
 }
 
+.publication-groups {
+  display: grid;
+  gap: 2rem;
+}
+
 .publication-card {
   display: grid;
-  grid-template-columns: 6rem minmax(0, 1fr);
-  gap: 1rem;
+  grid-template-columns: clamp(10rem, 20vw, 14rem) minmax(0, 1fr);
+  gap: 1.25rem;
   align-items: start;
+}
+
+.publication-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 4px;
+  background: white;
+}
+
+.publication-year-section + .publication-year-section {
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.publication-year-section h2 {
+  margin-bottom: 1rem;
+  color: var(--raspberry);
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  line-height: 1;
 }
 
 .publication-year {
   color: var(--raspberry);
   font-family: var(--font-host), Arial, sans-serif;
   font-weight: 800;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
 }
 
 .collab-hero {
@@ -1144,6 +1180,10 @@ a.reading-title:focus-visible {
   .publication-card,
   .syllabus-item {
     grid-template-columns: 1fr;
+  }
+
+  .publication-image {
+    max-width: 20rem;
   }
 
   .course-facts div {

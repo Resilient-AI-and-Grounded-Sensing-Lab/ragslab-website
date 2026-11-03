@@ -1,0 +1,14 @@
+title: >-
+  Intrinsic Goals for Autonomous Agents: Hierarchical Exploration Captures Future Volitional Action
+  in Drosophila
+authors: Declan Kutscher, Reece Keller, Alyn Kirsch, Felix Pei, Aran Nayebi
+venue: arXiv preprint
+year: 2026
+links:
+  - label: Paper
+    url: https://arxiv.org/abs/2610.34638
+  - label: Project
+    url: https://neuroagents-lab.github.io/autonomous_drosophila/
+  - label: Code
+    url: https://github.com/neuroagents-lab/autonomous_drosophila
+image: /publications/autonomous-drosophila.webp

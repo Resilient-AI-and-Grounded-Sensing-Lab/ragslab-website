@@ -1,0 +1,16 @@
+title: 'ClimSim-Online: A Large Multi-Scale Dataset and Framework for Hybrid Physics-ML Climate Emulation'
+authors: >-
+  Sungduk Yu, Zeyuan Hu, Akshay Subramaniam, Walter Hannah, Liran Peng, Jerry Lin, Mohamed Aziz
+  Bhouri, Ritwik Gupta, Björn Lütjens, Justus C Will, Gunnar Behrens, Julius JM Busecke, Nora Loose,
+  Charles I Stern, Tom Beucler, Bryce Harrop, Helge Heuer, Benjamin R Hillman, Andrea Jenney, Nana
+  Liu, Alistair White, Tian Zheng, Zhiming Kuang, Fiaz Ahmed, Elizabeth Barnes, Noah D Brenowitz,
+  Christopher Bretherton, Veronika Eyring, Savannah Ferretti, Nicholas Lutsko, Pierre Gentine,
+  Stephan Mandt, J David Neelin, Rose Yu, Laure Zanna, Nathan M Urban, Janni Yuval, Ryan Abernathey,
+  Pierre Baldi, Wayne Chuang, Yu Huang, Fernando Iglesias-Suarez, Sanket Jantre, Po-Lun Ma, Sara
+  Shamekh, Guang Zhang, Michael Pritchard
+venue: Journal of Machine Learning Research (JMLR) 26 (2025) 1-85
+year: 2025
+links:
+  - label: Paper
+    url: https://www.jmlr.org/papers/v26/24-1014.html
+image: /publications/climsimonline.webp

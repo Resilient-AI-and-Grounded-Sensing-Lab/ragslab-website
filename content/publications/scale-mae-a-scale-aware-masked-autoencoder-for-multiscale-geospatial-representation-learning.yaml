@@ -1,0 +1,14 @@
+title: 'Scale-MAE: A Scale-Aware Masked Autoencoder for Multiscale Geospatial Representation Learning'
+authors: >-
+  Ritwik Gupta, Colorado Reed, Shufan Li, Sarah Brockman, Christopher Funk, Brian Clipp, Kurt
+  Keutzer, Salvatore Candido, Matt Uyttendaele, Trevor Darrell
+venue: International Conference on Computer Vision (ICCV) 2023
+year: 2023
+links:
+  - label: Project
+    url: https://ai-climate.berkeley.edu/scale-mae-website/
+  - label: Paper
+    url: https://arxiv.org/abs/2212.14532
+  - label: Code
+    url: https://github.com/bair-climate-initiative/scale-mae
+image: /publications/scalemae.webp

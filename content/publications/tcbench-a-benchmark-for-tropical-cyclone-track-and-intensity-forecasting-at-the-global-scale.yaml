@@ -1,0 +1,13 @@
+title: 'TCBench: A Benchmark for Tropical Cyclone Track and Intensity Forecasting at the Global Scale'
+authors: >-
+  Milton Gomez, Marie McGraw, Saranya Ganesh S., Frederick Iat-Hin Tam, Ilia Azizi, Samuel Darmon,
+  Monika Feldmann, Stella Bourdin, Louis Poulain-Auzéau, Suzana J. Camargo, Jonathan Lin, Dan
+  Chavas, Chia-Ying Lee, Ritwik Gupta, Andrea Jenney, Tom Beucler
+venue: arXiv preprint
+year: 2026
+links:
+  - label: Paper
+    url: https://arxiv.org/abs/2601.23268
+  - label: Code
+    url: https://github.com/tcbench/TCBench
+image: /publications/tcbench.webp

@@ -1,0 +1,12 @@
+title: 'xT: Nested Tokenization for Larger Context in Large Images'
+authors: Ritwik Gupta, Shufan Li, Tyler Zhu, Jitendra Malik, Trevor Darrell, Karttikeya Mangalam
+venue: International Conference on Machine Learning (ICML) 2024
+year: 2024
+links:
+  - label: Project
+    url: http://ai-climate.berkeley.edu/xt-website/
+  - label: Paper
+    url: https://arxiv.org/abs/2403.01915
+  - label: Code
+    url: http://github.com/bair-climate-initiative/xT/
+image: /publications/xt.webp

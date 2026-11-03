@@ -1,0 +1,17 @@
+title: >-
+  Crowdsourcing the Frontier: Advancing Hybrid Physics-ML Climate Simulation via a $50,000 Kaggle
+  Competition
+authors: >-
+  Jerry Lin, Zeyuan Hu, Tom Beucler, Katherine Frields, Hannah Christensen, Walter Hannah, Helge
+  Heuer, Peter Ukkonnen, Laura A. Mansfield, Tian Zheng, Liran Peng, Ritwik Gupta, Pierre Gentine,
+  Yusef Al-Naher, Mingjiang Duan, Kyo Hattori, Weiliang Ji, Chunhan Li, Kippei Matsuda, Naoki
+  Murakami, Shlomo Ron, Marec Serlin, Hongjian Song, Yuma Tanabe, Daisuke Yamamoto, Jianyao Zhou,
+  Mike Pritchard
+venue: Journal of Advances in Modeling Earth Systems
+year: 2025
+links:
+  - label: Paper
+    url: https://doi.org/10.1029/2025MS005643
+  - label: Code
+    url: https://github.com/leap-stc/climsim-kaggle-edition
+image: /publications/crowdsourcing.webp
