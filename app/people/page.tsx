@@ -1,5 +1,4 @@
 import { PeopleGrid } from "@/components/PeopleGrid";
-import { CompactIntroHeading } from "@/components/CompactIntroHeading";
 import { getPeople, Person } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
@@ -35,7 +34,7 @@ export default function PeoplePage() {
   return (
     <div className="page-shell">
       <section className="compact-page-intro">
-        <CompactIntroHeading title="People" />
+        <h1 className="intro-title">People</h1>
       </section>
 
       <PeopleSection title="Principal Investigator" people={principalInvestigators} prioritizeFirst />

@@ -37,17 +37,6 @@ export type Person = {
   image?: ProgressiveImageAsset;
 };
 
-export type ResearchItem = {
-  slug: string;
-  title: string;
-  summary: string;
-  status: string;
-  areas: string[];
-  lead: string;
-  featured: boolean;
-  order: number;
-};
-
 export type Publication = {
   featured?: boolean;
   slug: string;
@@ -113,10 +102,6 @@ function readPeopleYaml() {
 
 export function getPeople() {
   return readPeopleYaml().sort(comparePeopleByLastName);
-}
-
-export function getResearch() {
-  return readCollection<ResearchItem>("research").sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 }
 
 export function getPublications() {

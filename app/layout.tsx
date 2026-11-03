@@ -67,14 +67,6 @@ function SocialIcon({ name }: { name: SocialIconName }) {
     );
   }
 
-  if (name === "linkedin") {
-    return (
-      <svg aria-hidden="true" viewBox="0 0 24 24">
-        <path d="M6.94 8.75H3.56V20h3.38V8.75ZM7.16 5.28A1.95 1.95 0 1 0 3.25 5.3a1.95 1.95 0 0 0 3.91-.02ZM20.75 13.55c0-3.02-1.61-4.43-3.77-4.43a3.25 3.25 0 0 0-2.95 1.62h-.05V8.75h-3.24V20h3.38v-5.56c0-1.47.28-2.88 2.09-2.88 1.78 0 1.8 1.67 1.8 2.97V20h3.38l-.64-6.45Z" />
-      </svg>
-    );
-  }
-
   if (name === "x-twitter") {
     return (
       <svg aria-hidden="true" viewBox="0 0 24 24">
@@ -100,7 +92,7 @@ export default function RootLayout({
         <SiteHeader courseSlugs={courseSlugs} />
         <main id="main-content">{children}</main>
         <footer className="site-footer">
-          <Link className="footer-mark" href="/" aria-label="RAGS Lab home">
+          <Link href="/" aria-label="RAGS Lab home">
             Resilient AI and Grounded Sensing Lab
           </Link>
           <nav aria-label="Social links">

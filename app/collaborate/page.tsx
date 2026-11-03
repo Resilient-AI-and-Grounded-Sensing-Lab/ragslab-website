@@ -1,5 +1,4 @@
 import { LoopVideo } from "@/components/LoopVideo";
-import { CompactIntroHeading } from "@/components/CompactIntroHeading";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = {
@@ -62,7 +61,7 @@ export default function CollaboratePage() {
     <div className="page-shell">
       <section className="compact-page-intro collab-hero">
         <div className="collab-hero-copy">
-          <CompactIntroHeading title="Collaborate" />
+          <h1 className="intro-title">Collaborate</h1>
           <p className="lede">
             We work with partners who have real constraints, messy signals, and
             operational stakes that standard AI demos ignore.

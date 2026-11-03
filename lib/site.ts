@@ -26,4 +26,4 @@ export const siteConfig = {
   ],
 } as const;
 
-export type SocialIconName = "github" | "linkedin" | "x-twitter";
+export type SocialIconName = (typeof siteConfig.socials)[number]["icon"];

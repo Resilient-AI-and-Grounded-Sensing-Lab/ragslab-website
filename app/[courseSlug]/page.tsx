@@ -98,10 +98,8 @@ function SessionSlides({ session }: { session: CourseSession }) {
 const readingTypeOrder = ["technical", "policy", "bridge", "standard"];
 
 function ReadingTypePill({ type }: { type: string }) {
-  const normalizedType = type.trim().toLowerCase();
-
   return (
-    <abbr className="reading-type" data-reading-type={normalizedType} title={type}>
+    <abbr className="reading-type" title={type}>
       {type.trim().charAt(0).toUpperCase()}
     </abbr>
   );
@@ -159,7 +157,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
   });
 
   return (
-    <div className="page-shell">
+    <div className="page-shell course-page">
       <section className="compact-page-intro course-hero">
         <div>
           <h1 className="intro-title">{course.title}</h1>
@@ -254,7 +252,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
         </div>
         {readingTypes.length ? (
           <aside className="reading-legend" aria-label="Reading type legend">
-            <span className="reading-legend-title">Reading types</span>
+            <span>Reading types</span>
             <ul>
               {readingTypes.map((type) => (
                 <li key={type}>

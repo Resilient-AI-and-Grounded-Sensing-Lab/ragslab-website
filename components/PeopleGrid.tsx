@@ -29,7 +29,7 @@ export function PeopleGrid({
           {person.image ? (
             <ProgressiveImage
               asset={person.image}
-              className="avatar avatar-image"
+              className="avatar"
               alt=""
               sizes="(max-width: 620px) 100px, 144px"
               loading={prioritizeFirst && index === 0 ? "eager" : "lazy"}
