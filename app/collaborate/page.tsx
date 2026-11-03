@@ -1,4 +1,4 @@
-import { assetPath } from "@/lib/assets";
+import { LoopVideo } from "@/components/LoopVideo";
 import { CompactIntroHeading } from "@/components/CompactIntroHeading";
 import { siteConfig } from "@/lib/site";
 
@@ -69,17 +69,8 @@ export default function CollaboratePage() {
           </p>
         </div>
         <div className="collab-panel">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster={assetPath("/brand/logo-no-text.svg")}
-          >
-            <source src={assetPath("/brand/collaborate.mp4")} type="video/mp4" />
-          </video>
+          <LoopVideo src="/brand/collaborate.mp4" poster="/brand/collaborate-poster.webp" />
           <div className="collab-panel-caption">
-            <p className="media-caption-label">Field-grounded work</p>
             <p>
               As researchers, we prioritize field work to make sure we understand the problems faced by end users.
             </p>
@@ -90,8 +81,7 @@ export default function CollaboratePage() {
       <section className="section">
         <div className="section-header">
           <div>
-            <p className="section-label">How we work</p>
-            <h2>Closing the research and deployment loop.</h2>
+            <h2>How we work</h2>
           </div>
         </div>
         <div className="grid-list">

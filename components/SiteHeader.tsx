@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { assetPath } from "@/lib/assets";
+import { SignalLink } from "@/components/SignalLink";
 import { siteConfig } from "@/lib/site";
 
 type SiteHeaderProps = {
@@ -10,10 +11,11 @@ type SiteHeaderProps = {
 };
 
 function isActivePath(pathname: string, href: string, courseSlugs: string[]) {
+  if (href === "/#research") return false;
   if (href === "/") return pathname === "/";
   if (pathname === href) return true;
   if (pathname.startsWith(`${href}/`)) return true;
-  if (href === "/teaching" && courseSlugs.some((slug) => pathname === `/${slug}`)) return true;
+  if (href === "/teaching" && courseSlugs.some((slug) => pathname.replace(/\/$/, "") === `/${slug}`)) return true;
   return false;
 }
 
@@ -32,14 +34,14 @@ export function SiteHeader({ courseSlugs }: SiteHeaderProps) {
             const isActive = isActivePath(pathname, item.href, courseSlugs);
 
             return (
-              <Link
+              <SignalLink
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? "page" : undefined}
-                className={isActive ? "is-active" : undefined}
+                className={[isActive ? "is-active" : "", item.href === "/collaborate" ? "nav-contact" : ""].filter(Boolean).join(" ")}
               >
                 {item.label}
-              </Link>
+              </SignalLink>
             );
           })}
         </nav>

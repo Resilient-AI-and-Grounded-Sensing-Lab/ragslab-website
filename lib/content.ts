@@ -49,6 +49,7 @@ export type ResearchItem = {
 };
 
 export type Publication = {
+  featured?: boolean;
   slug: string;
   title: string;
   image: string;

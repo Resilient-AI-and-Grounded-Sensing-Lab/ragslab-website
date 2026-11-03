@@ -23,7 +23,7 @@ export function PeopleGrid({
   prioritizeFirst?: boolean;
 }) {
   return (
-    <div className="grid-list">
+    <div className="people-grid">
       {people.map((person, index) => (
         <article className="person-card" key={person.slug}>
           {person.image ? (
@@ -31,7 +31,7 @@ export function PeopleGrid({
               asset={person.image}
               className="avatar avatar-image"
               alt=""
-              sizes="72px"
+              sizes="(max-width: 620px) 100px, 144px"
               loading={prioritizeFirst && index === 0 ? "eager" : "lazy"}
               fetchPriority={prioritizeFirst && index === 0 ? "high" : "auto"}
               objectFit="cover"

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
-import { assetPath } from "@/lib/assets";
 import { siteConfig, SocialIconName } from "@/lib/site";
 import { getCourses } from "@/lib/teaching";
 import "./globals.css";
@@ -49,7 +48,8 @@ export const metadata: Metadata = {
 const hostGrotesk = localFont({
   src: "../public/fonts/host-grotesk.woff2",
   variable: "--font-host",
-  display: "swap"
+  display: "swap",
+  weight: "100 900"
 });
 
 const lora = localFont({
@@ -101,13 +101,13 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <footer className="site-footer">
           <Link className="footer-mark" href="/" aria-label="RAGS Lab home">
-            <img src={assetPath("/brand/logo-no-text.svg")} alt="" />
+            Resilient AI and Grounded Sensing Lab
           </Link>
           <nav aria-label="Social links">
             {siteConfig.socials.map((social) => (
               <a key={social.label} href={social.href} aria-label={social.label}>
                 <SocialIcon name={social.icon} />
-                <span>{social.label}</span>
+                <span className="sr-only">{social.label}</span>
               </a>
             ))}
           </nav>

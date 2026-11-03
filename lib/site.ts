@@ -6,7 +6,7 @@ export const siteConfig = {
   url: "https://ragslab.ai",
   ogImage: "/og-image.png",
   nav: [
-    { href: "/", label: "Home" },
+    { href: "/#research", label: "Research" },
     { href: "/people", label: "People" },
     { href: "/publications", label: "Publications" },
     { href: "/teaching", label: "Teaching" },
@@ -19,7 +19,7 @@ export const siteConfig = {
       icon: "github"
     },
     {
-      label: "Twitter",
+      label: "X (@Ritwik_G)",
       href: "https://x.com/Ritwik_G",
       icon: "x-twitter"
     }

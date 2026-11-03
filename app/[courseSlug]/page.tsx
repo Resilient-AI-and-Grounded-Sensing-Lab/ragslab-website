@@ -162,8 +162,8 @@ export default async function CoursePage({ params }: CoursePageProps) {
     <div className="page-shell">
       <section className="compact-page-intro course-hero">
         <div>
-          <span className="course-hero-label">{course.code} / {course.term}</span>
           <h1 className="intro-title">{course.title}</h1>
+          <p className="course-identity">{course.code} · {course.term}</p>
         </div>
         <aside className="course-facts" aria-label="Course information">
           <dl>
