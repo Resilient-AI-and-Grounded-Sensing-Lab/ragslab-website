@@ -1,83 +1,90 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useId, useRef, type ComponentProps } from "react";
+import { useEffect, useRef, type ComponentProps } from "react";
 import { signalNoise, smooth } from "@/lib/signal";
 
-/** Opt-in motion for navigation only. Ordinary .button links stay static. */
-export function SignalLink(props: ComponentProps<typeof Link>) {
+/** Navigation-only motion; the original link remains the accessible hit target. */
+export function SignalLink({ children, ...props }: ComponentProps<typeof Link>) {
   const ref = useRef<HTMLAnchorElement>(null);
-  const filterId = `signal-${useId().replace(/:/g, "")}`;
 
   useEffect(() => {
     const control = ref.current;
     if (!control) return;
     const reduced = matchMedia("(prefers-reduced-motion: reduce)");
-    const ns = "http://www.w3.org/2000/svg";
-    const svg = document.createElementNS(ns, "svg");
-    svg.classList.add("signal-filter-definitions");
-    svg.setAttribute("aria-hidden", "true");
-    const defs = document.createElementNS(ns, "defs");
-    const filter = document.createElementNS(ns, "filter");
-    filter.id = filterId;
-    filter.setAttribute("filterUnits", "userSpaceOnUse");
-    filter.setAttribute("color-interpolation-filters", "sRGB");
-    const map = document.createElementNS(ns, "feImage");
-    map.setAttribute("result", "signal-map");
-    map.setAttribute("preserveAspectRatio", "none");
-    const displacement = document.createElementNS(ns, "feDisplacementMap");
-    displacement.setAttribute("in", "SourceGraphic");
-    displacement.setAttribute("in2", "signal-map");
-    displacement.setAttribute("xChannelSelector", "R");
-    displacement.setAttribute("yChannelSelector", "G");
-    displacement.setAttribute("scale", "0");
-    filter.append(map, displacement);
-    defs.append(filter);
-    svg.append(defs);
-    document.body.append(svg);
-    let frame = 0, active = false;
+    let frame = 0;
+    let surface: HTMLSpanElement | null = null;
 
     function reset() {
       cancelAnimationFrame(frame);
-      control?.style.removeProperty("filter");
-      displacement.setAttribute("scale", "0");
-      active = false;
+      control?.classList.remove("signal-active");
+      surface?.remove();
+      surface = null;
     }
 
     function run() {
-      if (!control || reduced.matches || active) return;
-      const rect = control.getBoundingClientRect();
-      const padding = 12, width = Math.ceil(rect.width) + padding * 2, height = Math.ceil(rect.height) + padding * 2;
-      for (const node of [filter, map]) {
-        node.setAttribute("x", String(-padding));
-        node.setAttribute("y", String(-padding));
-        node.setAttribute("width", String(width));
-        node.setAttribute("height", String(height));
+      if (!control || reduced.matches || surface || document.hidden) return;
+      const style = getComputedStyle(control);
+      const { width, height } = control.getBoundingClientRect();
+      if (!width || !height) return;
+      const label = control.querySelector(".signal-label")?.textContent ?? "";
+      const padding = 12;
+      const extent = width + padding * 2;
+      const duration = parseFloat(style.getPropertyValue("--motion-denoise")) || 1250;
+      const layer = document.createElement("span");
+      layer.className = "signal-surface";
+      layer.setAttribute("aria-hidden", "true");
+      layer.style.left = `${-padding - parseFloat(style.borderLeftWidth)}px`;
+      layer.style.top = `${-padding - parseFloat(style.borderTopWidth)}px`;
+      layer.style.width = `${extent}px`;
+      layer.style.height = `${height + padding * 2}px`;
+      const pieces: Array<{ element: HTMLSpanElement; x: number; y: number }> = [];
+
+      // CSS clipping and transforms work on HTML in Safari without an SVG filter.
+      // Each strip paints the same button, including its background and border.
+      for (let x = 0; x < extent; x += 2) {
+        const clip = document.createElement("span");
+        clip.className = "signal-strip";
+        clip.style.left = `${x}px`;
+        clip.style.width = `${Math.min(2, extent - x)}px`;
+        const copy = document.createElement("span");
+        copy.className = "signal-copy";
+        copy.textContent = label;
+        Object.assign(copy.style, {
+          left: `${padding - x}px`,
+          top: `${padding}px`,
+          width: `${width}px`,
+          height: `${height}px`,
+          font: style.font,
+          letterSpacing: style.letterSpacing,
+          color: style.color,
+          backgroundColor: style.backgroundColor,
+          border: style.border,
+          borderRadius: style.borderRadius
+        });
+        clip.append(copy);
+        layer.append(clip);
+        const u = (x - padding + 1) / width;
+        pieces.push({
+          element: copy,
+          x: 2 * Math.sin(u * 11 + 4.65),
+          y: 5 * signalNoise(u, 1.5, 0) / .056
+        });
       }
-      const field = document.createElement("canvas");
-      field.width = width;
-      field.height = height;
-      const context = field.getContext("2d");
-      if (!context) return;
-      const pixels = context.createImageData(width, height);
-      for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) {
-        const u = (x - padding) / rect.width, row = (y - padding) / rect.height * 3, offset = (y * width + x) * 4;
-        pixels.data[offset] = 128 + 45 * Math.sin(row * 3.1 + u * 11);
-        pixels.data[offset + 1] = 128 + 127 * signalNoise(u, row, 0) / .056;
-        pixels.data[offset + 2] = 128;
-        pixels.data[offset + 3] = 255;
-      }
-      context.putImageData(pixels, 0, 0);
-      map.setAttribute("href", field.toDataURL());
-      const duration = parseFloat(getComputedStyle(control).getPropertyValue("--motion-denoise")) || 1250;
+
+      // Prepare the replacement before hiding the original paint. Text and the
+      // anchor stay in the accessibility tree; the decorative copies do not.
+      control.append(layer);
+      surface = layer;
+      control.classList.add("signal-active");
       const started = performance.now();
-      active = true;
-      control.style.filter = `url(#${filterId})`;
       function settle(now: number) {
         const progress = Math.min(1, (now - started) / duration);
         const amount = progress < .16 ? smooth(progress / .16) : 1 - smooth((progress - .16) / .84);
-        displacement.setAttribute("scale", String(10 * amount));
-        if (progress < 1 && !reduced.matches) frame = requestAnimationFrame(settle);
+        for (const piece of pieces) {
+          piece.element.style.transform = `translate(${piece.x * amount}px, ${piece.y * amount}px)`;
+        }
+        if (progress < 1 && !reduced.matches && !document.hidden) frame = requestAnimationFrame(settle);
         else reset();
       }
       frame = requestAnimationFrame(settle);
@@ -85,15 +92,20 @@ export function SignalLink(props: ComponentProps<typeof Link>) {
 
     control.addEventListener("pointerenter", run);
     control.addEventListener("focus", run);
+    control.addEventListener("click", reset);
     reduced.addEventListener("change", reset);
+    window.addEventListener("resize", reset);
+    document.addEventListener("visibilitychange", reset);
     return () => {
       reset();
-      svg.remove();
       control.removeEventListener("pointerenter", run);
       control.removeEventListener("focus", run);
+      control.removeEventListener("click", reset);
       reduced.removeEventListener("change", reset);
+      window.removeEventListener("resize", reset);
+      document.removeEventListener("visibilitychange", reset);
     };
-  }, [filterId]);
+  }, []);
 
-  return <Link {...props} ref={ref} />;
+  return <Link {...props} ref={ref}><span className="signal-label">{children}</span></Link>;
 }
