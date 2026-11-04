@@ -97,8 +97,10 @@ p + p { margin-top: 12px; }
 .home-community { padding: 31px 0 33px; background: var(--midnight); color: var(--paper); }
 .home-community .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; }
 .home-community p { color: #ccc5bb; max-width: 380px; margin: 11px 0 18px; font: 400 14px/1.5 var(--font-lora), Georgia, serif; }
-.portraits { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
-.portraits .progressive-image { width: 70px; height: 80px; filter: saturate(.8); }
+.portrait-cloud { position: relative; width: min(100%, 384px); aspect-ratio: 1.8; padding: 0; margin: 18px 0; list-style: none; isolation: isolate; }
+.portrait-cloud li { position: absolute; transform: translate(-50%, -50%); }
+.portrait-cloud .progressive-image { width: 100%; aspect-ratio: 1 !important; border: 2px solid var(--midnight); border-radius: 50%; filter: saturate(.8); }
+.portrait-cloud img { object-position: center 35%; }
 .joining { border-left: 1px solid var(--line-dark); padding-left: 30px; }
 
 /* Images: shared progressive loading, rectangular portraits and paper figures. */
@@ -211,7 +213,7 @@ p + p { margin-top: 12px; }
   .publication-card-compact { grid-template-columns: 148px minmax(0, 1fr); gap: 20px; }
   .publication-card-compact .publication-image { height: 114px; }
   .publication-card-compact h3 { font-size: 20px; max-width: 55ch; }
-  .portraits .progressive-image { width: clamp(88px, 5vw, 112px); height: clamp(100px, 5.7vw, 128px); }
+  .portrait-cloud { width: min(100%, 464px); }
   .home-community p { max-width: 48ch; }
   .publication-authors { max-width: 82ch; }
   .assignment-description { max-width: 72ch; }
@@ -265,7 +267,6 @@ p + p { margin-top: 12px; }
   .publication-card-compact h3 { font-size: 18px; }
   .home-community .wrap { grid-template-columns: 1fr; gap: 30px; }
   .joining { border-left: 0; border-top: 1px solid var(--line-dark); padding: 25px 0 0; }
-  .portraits .progressive-image { width: 62px; height: 72px; }
   .site-footer { align-items: start; flex-direction: column; gap: 12px; }
   .compact-page-intro { padding: 28px 0 20px; }
   .person-card { grid-template-columns: 100px minmax(0, 1fr); gap: 16px; }

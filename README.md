@@ -4,9 +4,11 @@ Static-export Next.js site for the Resilient AI and Grounded Sensing Lab.
 
 ## Development
 
+Use Node.js 26 (see `.nvmrc`) and pnpm 10.17.1, pinned in `package.json`.
+
 ```bash
-npm install
-npm run dev
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
 Local development runs at `http://localhost:3000`.
@@ -14,12 +16,14 @@ Local development runs at `http://localhost:3000`.
 ## Verification
 
 ```bash
-npm run lint
-npm run typecheck
-npm run build
+pnpm lint
+pnpm typecheck
+pnpm build
 ```
 
-`npm run build` exports the static site to `out/`.
+Lint runs separately from the Next.js build; CI runs all three checks.
+
+`pnpm build` exports the static site to `out/`.
 
 ## GitHub Pages
 
@@ -27,11 +31,11 @@ Production builds default to the `/ragslab-website` base path for a GitHub
 Pages project site. Override it with:
 
 ```bash
-NEXT_PUBLIC_BASE_PATH=/your-base-path npm run build
+NEXT_PUBLIC_BASE_PATH=/your-base-path pnpm build
 ```
 
 For a custom domain at the root, use:
 
 ```bash
-NEXT_PUBLIC_BASE_PATH= npm run build
+NEXT_PUBLIC_BASE_PATH= pnpm build
 ```

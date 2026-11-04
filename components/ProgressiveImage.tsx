@@ -49,7 +49,7 @@ export function ProgressiveImage({
     } else {
       reveal();
     }
-  }, []);
+  }, [setLoadState]);
 
   useEffect(() => {
     const image = imageRef.current;

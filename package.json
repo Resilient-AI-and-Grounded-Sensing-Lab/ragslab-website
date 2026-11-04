@@ -8,21 +8,25 @@
     "images:generate": "node scripts/optimize-assets.mjs",
     "lint": "eslint .",
     "optimize:assets": "node scripts/optimize-assets.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0",
-    "next": "^15.3.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "js-yaml": "^4.3.2",
+    "next": "^16.4.5",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
-    "@types/node": "^22.15.29",
-    "@types/react": "^19.0.12",
-    "@types/react-dom": "^19.0.4",
-    "eslint": "^9.28.0",
-    "eslint-config-next": "^15.5.18",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^10.14.0",
+    "eslint-config-next": "^16.4.5",
     "sharp": "^0.34.5",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": "26.x"
   }
 }

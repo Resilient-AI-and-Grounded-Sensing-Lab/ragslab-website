@@ -30,7 +30,9 @@ export function SignalLink({ children, ...props }: ComponentProps<typeof Link>) 
       const label = control.querySelector(".signal-label")?.textContent ?? "";
       const padding = 12;
       const extent = width + padding * 2;
-      const duration = parseFloat(style.getPropertyValue("--motion-denoise")) || 1250;
+      // CSS optimizers may rewrite milliseconds as seconds.
+      const motionTime = style.getPropertyValue("--motion-denoise").trim();
+      const duration = parseFloat(motionTime) * (motionTime.endsWith("ms") ? 1 : 1000) || 1250;
       const layer = document.createElement("span");
       layer.className = "signal-surface";
       layer.setAttribute("aria-hidden", "true");
@@ -79,7 +81,7 @@ export function SignalLink({ children, ...props }: ComponentProps<typeof Link>) 
       control.classList.add("signal-active");
       const started = performance.now();
       function settle(now: number) {
-        const progress = Math.min(1, (now - started) / duration);
+        const progress = Math.max(0, Math.min(1, (now - started) / duration));
         const amount = progress < .16 ? smooth(progress / .16) : 1 - smooth((progress - .16) / .84);
         for (const piece of pieces) {
           piece.element.style.transform = `translate(${piece.x * amount}px, ${piece.y * amount}px)`;

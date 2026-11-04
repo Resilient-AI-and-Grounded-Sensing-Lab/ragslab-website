@@ -84,7 +84,7 @@ export default function RootLayout({
   const courseSlugs = getCourses().map((course) => course.slug);
 
   return (
-    <html lang="en" className={`${hostGrotesk.variable} ${lora.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${hostGrotesk.variable} ${lora.variable}`}>
       <body>
         <a className="skip-link" href="#main-content">
           Skip to main content

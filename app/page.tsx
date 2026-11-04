@@ -8,7 +8,11 @@ import { getPeople, getPublications } from "@/lib/content";
 export default function Home() {
   const publications = getPublications().filter((paper) => paper.featured).slice(0, 2);
   const people = getPeople();
-  const portraits = [...people.filter((person) => person.group === "pi"), ...people.filter((person) => person.group !== "pi")].filter((person) => person.image).slice(0, 4);
+  const portraits = [...people.filter((person) => person.group === "pi"), ...people.filter((person) => person.group !== "pi")].filter((person) => person.image);
+  const columns = Math.ceil(Math.sqrt(portraits.length * 2));
+  const rows = Math.ceil(portraits.length / columns);
+  // Keep the footprint fixed; denser rosters use smaller, more overlapping bubbles.
+  const portraitSize = Math.min(38, 53.5 / Math.pow(portraits.length, .4));
   return (
     <>
       <Hero />
@@ -28,9 +32,23 @@ export default function Home() {
         <div className="wrap">
           <div>
             <h2>People</h2>
-            <div className="portraits">
-              {portraits.map((person) => person.image ? <ProgressiveImage asset={person.image} alt={person.name} sizes="(min-width: 2240px) 112px, (min-width: 1760px) 5vw, (min-width: 1500px) 88px, (max-width: 620px) 62px, 70px" key={person.slug} /> : null)}
-            </div>
+            <ul className="portrait-cloud" aria-label="Lab members">
+              {portraits.map((person, index) => {
+                if (!person.image) return null;
+                const row = Math.floor(index / columns);
+                const column = index % columns;
+                const rowCount = Math.min(columns, portraits.length - row * columns);
+                const x = 50 + (column - (rowCount - 1) / 2) * Math.min(23, 69 / Math.max(1, columns - 1));
+                const y = 50 + (row - (rows - 1) / 2) * (38 / Math.max(1, rows - 1)) + Math.sin(index * 2.4) * 3;
+                return (
+                  <li key={person.slug} title={person.name} style={{
+                    left: `${x}%`, top: `${y}%`, width: `${portraitSize}%`
+                  }}>
+                    <ProgressiveImage asset={person.image} alt={person.name} sizes={`(min-width: 1500px) ${Math.ceil(464 * portraitSize / 100)}px, (max-width: 620px) ${Math.ceil(portraitSize)}vw, ${Math.ceil(384 * portraitSize / 100)}px`} />
+                  </li>
+                );
+              })}
+            </ul>
             <Link className="button button-on-dark" href="/people">Meet the lab</Link>
           </div>
           <div className="joining">
